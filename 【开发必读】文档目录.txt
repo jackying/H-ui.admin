@@ -1,0 +1,339 @@
+Copyright (C)2014 www.H-ui.net	guojunhui	1:45 2014/12/31
+==========================================================
+--------------用心做站，做不一样的站--------------
+
+H-ui.admin v2.0 遵循LGPL协议，将永久性提供无偿服务。
+
+如果想做皮肤定制，只需要修改H-ui.admin.css 第10——23行代码。
+
+同时，H-ui.admin也提供定制服务！（为了生存，定制需要收取一些收费哦~）
+
+H-ui一直秉承“不求多炫，实用为主！”的宗旨,为广大工程师提供最实用，最易用的前端代码。
+
+如果您有项目也在使用H-ui.admin,请保留网站后台底部版权信息，谢谢！
+
+您可以联系作者，以便在此展现案例，也为您的品牌推广尽一些绵薄之力。
+
+--------------用心做站，做不一样的站--------------
+==========================================================
+\高高手\WWW.GOGOUP.COM\ADMIN
+│  _blank.html				空白页(每次我们都拿空白页去创建，这样比较干净！)
+│  _footer.html			页脚公共代码片段
+│  _header.html			头部公共代码片段
+│  _meta.html				meta公共代码片段
+│  robots.txt				搜索引擎爬虫配置文件
+│  login.html				管理员登陆
+│  index.html				首页(主框架)
+│  welcome.html			我的桌面（默认永远打开的页面）
+│  用户中心
+│  user-add.html			用户添加
+│  user-list				用户管理(list)
+│  user-view.html			用户信息(pop)
+│  资讯管理
+│  artice-class.html			资讯分类
+
+│  artice-add.html			资讯添加
+│  artice-list.html			资讯管理(list)
+│  artice-view.html			资讯预览(pop)
+│  图片库
+│  picture-class.html			图片分类
+│  picture-add.html			图片添加
+│  picture-list.html			图片管理(list)
+│  picture-show.html			图片预览(pop)
+│  产品库
+│  product-brand.html			品牌管理
+│  product-class.html			产品分类
+│  product-add.html			产品添加(list)
+│  product-list.html			产品列表(list)
+
+│  product-show.html			产品预览(pop)
+│  页面管理
+│  page-moban.html			模版管理
+
+│  page-flink.html			友情链接
+
+│  系统管理
+│  system-base.html			基本设置
+
+│  system-lanmu.html			栏目设置
+
+│  system-data.html			数据字典
+│  system-log.html			系统日志(list)
+
+│  管理员管理
+│  admin-list.html			管理员-列表
+│  admin-password-edit.html		管理员-密码-编辑（pop）
+│  admin-role-edit.html		管理员-角色-编辑（pop）
+│  admin-role.html			管理员-角色
+│  统计管理
+│  tongji-list.html	统计列表(list)
+
+
+├─css
+│      dropzone.css			拖拽上传插件样式
+│      H-ui.admin.css			H-ui.admin样式
+│      H-ui.css			h-ui CSS库
+│      H-ui.login.css			H-ui.admin后台登录样式
+│      
+├─images				UI相关的图片素材
+│      acrossTab-bg.png
+│      acrossTab-close.png
+│      acrossTab.png
+│      admin-login-bg.jpg
+│      admin-loginform-bg.png
+│      hamburger-retina.gif
+│      hamburger.gif
+│      icon-add.png
+│      icon-pass.png
+│      icon-user.png
+│      icon_arrow.png
+│      icon_jt2.png
+│      logo.png
+│      sort_asc.png
+│      sort_both.png
+│      sort_desc.png
+│      toTop.png
+│      
+├─js
+│      ajaxfileupload.js		异步上传文件的jQuery插件
+│      DD_belatedPNG_0.0.8a-min.js	解决IE6png透明
+│      de_DE.txt			表格排序插件语言配置
+│      dropzone.min.js			拖拽上传插件
+│      H-ui.admin.js			本站相关的js
+│      H-ui.js				H-ui核心脚本
+│      html5.js			html5插件，让低版本IE支持html5元素
+│      jquery.cookie.js		jQuery.cookie
+│      jquery.dataTables.min.js	表格排序插件
+│      jquery.min.js			jQuery类库
+│      page.js				翻页脚本
+│      pagenav.cn.js			翻页脚本
+│      passwordStrength-min.js		密码强度校验
+│      preview.js			图片预览插件
+│      Validform_v5.3.2_min.js		表单验证插件
+│
+├─font				字体图标插件
+│      fontawesome-webfont.eot
+│      fontawesome-webfont.svg
+│      fontawesome-webfont.ttf
+│      fontawesome-webfont.woff
+│      FontAwesome.otf
+│      font-awesome-ie7.css		字体图标样式
+│      font-awesome-ie7.min.css	字体图标样式压缩版（一般引用此版）
+│      font-awesome.css		字体图标样式IE7兼容版
+│      font-awesome.min.css		字体图标样式IE7兼容压缩版（一般引用此版）
+│
+├─layer				弹出层插件
+│  │	layer.min.js 
+│  ├─extend
+│  │      layer.ext.js
+│  │      
+│  └─skin
+│      │  layer.css
+│      │  layer.ext.css
+│      │  
+│      └─default
+│              icon_ext.png
+│              textbg.png
+│              xubox_ico0.png
+│              xubox_loading0.gif
+│              xubox_loading1.gif
+│              xubox_loading2.gif
+│              xubox_loading3.gif
+│              xubox_title0.png
+├─plugin				插件
+│  ├─datePicker			日期插件
+│  │      datePicker-min.css
+│  │      datePicker.css
+│  │      jquery.bgiframe.min.js
+│  │      jquery.datePicker-min.js
+│  │      jquery.datePicker.js
+│  │               
+│  ├─My97DatePicker			My97日期插件
+│  │  │  calendar.js
+│  │  │  WdatePicker.js
+│  │  │  
+│  │  ├─lang
+│  │  │      en.js
+│  │  │      zh-cn.js
+│  │  │      zh-tw.js
+│  │  │      
+│  │  └─skin
+│  │      │  datePicker.gif
+│  │      │  WdatePicker.css
+│  │      │  
+│  │      ├─default
+│  │      │      datepicker.css
+│  │      │      img.gif
+│  │      │      
+│  │      ├─twoer
+│  │      │      datepicker-dev.css
+│  │      │      datepicker.css
+│  │      │      img.gif
+│  │      │      img.png
+│  │      │      
+│  │      └─whyGreen
+│  │              bg.jpg
+│  │              datepicker.css
+│  │              img.gif
+│  │      
+│  ├─swfupload			文件上传插件
+│  │      swfupload.queue-min.js
+│  │      swfupload.queue.js
+│  │      swfupload.swf
+│  │      swfuploadbutton.swf
+│  │      swfuploadv2.2-min.js
+│  │      swfuploadv2.2.js
+│  │      thanks.php
+│  │      upload.php
+│  │      Validform.swfupload.handler-min.js
+│  │      Validform.swfupload.handler.js
+│  │      XPButtonUploadText_61x22.png
+│  │      
+│  └─umeditor			百度编辑器插件
+│      │  index.html
+│      │  umeditor.config.js
+│      │  umeditor.js
+│      │  umeditor.min.js
+│      │  
+│      ├─dialogs
+│      │  ├─emotion
+│      │  │  │  emotion.css
+│      │  │  │  emotion.js
+│      │  │  │  
+│      │  │  └─images
+│      │  │          0.gif
+│      │  │          bface.gif
+│      │  │          cface.gif
+│      │  │          fface.gif
+│      │  │          jxface2.gif
+│      │  │          neweditor-tab-bg.png
+│      │  │          tface.gif
+│      │  │          wface.gif
+│      │  │          yface.gif
+│      │  │          
+│      │  ├─formula
+│      │  │  │  formula.css
+│      │  │  │  formula.html
+│      │  │  │  formula.js
+│      │  │  │  
+│      │  │  └─images
+│      │  │          formula.png
+│      │  │          
+│      │  ├─image
+│      │  │  │  image.css
+│      │  │  │  image.js
+│      │  │  │  
+│      │  │  └─images
+│      │  │          close.png
+│      │  │          upload1.png
+│      │  │          upload2.png
+│      │  │          
+│      │  ├─link
+│      │  │      link.js
+│      │  │      
+│      │  ├─map
+│      │  │      map.html
+│      │  │      map.js
+│      │  │      
+│      │  └─video
+│      │      │  video.css
+│      │      │  video.js
+│      │      │  
+│      │      └─images
+│      │              center_focus.jpg
+│      │              left_focus.jpg
+│      │              none_focus.jpg
+│      │              right_focus.jpg
+│      │              
+│      ├─jsp
+│      │      commons-fileupload-1.2.2.jar
+│      │      getContent.jsp
+│      │      imageUp.jsp
+│      │      ueditor-mini.jar
+│      │      Uploader.java
+│      │      
+│      ├─lang
+│      │  ├─en
+│      │  │  │  en.js
+│      │  │  │  
+│      │  │  └─images
+│      │  │          addimage.png
+│      │  │          alldeletebtnhoverskin.png
+│      │  │          alldeletebtnupskin.png
+│      │  │          background.png
+│      │  │          button.png
+│      │  │          copy.png
+│      │  │          deletedisable.png
+│      │  │          deleteenable.png
+│      │  │          imglabel.png
+│      │  │          listbackground.png
+│      │  │          localimage.png
+│      │  │          music.png
+│      │  │          rotateleftdisable.png
+│      │  │          rotateleftenable.png
+│      │  │          rotaterightdisable.png
+│      │  │          rotaterightenable.png
+│      │  │          upload.png
+│      │  │          
+│      │  └─zh-cn
+│      │      │  zh-cn.js
+│      │      │  
+│      │      └─images
+│      │              copy.png
+│      │              imglabel.png
+│      │              localimage.png
+│      │              music.png
+│      │              upload.png
+│      │              
+│      ├─themes
+│      │  └─default
+│      │      ├─css
+│      │      │      umeditor.css
+│      │      │      umeditor.min.css
+│      │      │      
+│      │      └─images
+│      │              caret.png
+│      │              close.png
+│      │              icons.gif
+│      │              icons.png
+│      │              ok.gif
+│      │              pop-bg.png
+│      │              spacer.gif
+│      │              videologo.gif
+│      │              
+│      └─third-party
+│          │  jquery.min.js
+│          │  
+│          └─mathquill
+│              │  mathquill.css
+│              │  mathquill.js
+│              │  mathquill.min.js
+│              │  
+│              └─font
+│                  │  Symbola.eot
+│                  │  Symbola.otf
+│                  │  Symbola.svg
+│                  │  Symbola.ttf
+│                  │  Symbola.woff
+│                  │  
+│                  └─stixgeneral-bundle
+│                          STIXFontLicense2010.txt
+│                          stixgeneral-webfont.eot
+│                          stixgeneral-webfont.svg
+│                          stixgeneral-webfont.ttf
+│                          stixgeneral-webfont.woff
+│                          stixgeneralbol-webfont.eot
+│                          stixgeneralbol-webfont.svg
+│                          stixgeneralbol-webfont.ttf
+│                          stixgeneralbol-webfont.woff
+│                          stixgeneralbolita-webfont.eot
+│                          stixgeneralbolita-webfont.svg
+│                          stixgeneralbolita-webfont.ttf
+│                          stixgeneralbolita-webfont.woff
+│                          stixgeneralitalic-webfont.eot
+│                          stixgeneralitalic-webfont.svg
+│                          stixgeneralitalic-webfont.ttf
+│                          stixgeneralitalic-webfont.woff
+│                          
+└─temp				临时目录
+        card.jpg
