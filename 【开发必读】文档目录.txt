@@ -1,12 +1,10 @@
-Copyright (C)2014 www.H-ui.net	guojunhui	1:45 2014/12/31
-==========================================================
+Copyright (C)2003-2017 www.H-ui.net	»Ô¸ç	12:56 2017/1/15
+==================================================================
 --------------ÓÃĞÄ×öÕ¾£¬×ö²»Ò»ÑùµÄÕ¾--------------
 
-H-ui.admin v2.0 ×ñÑ­LGPLĞ­Òé£¬½«ÓÀ¾ÃĞÔÌá¹©ÎŞ³¥·şÎñ¡£
+H-ui.admin v3.0 ×ñÑ­ CC BY 3.0Ğ­Òé£¬½«ÓÀ¾ÃĞÔÌá¹©ÎŞ³¥·şÎñ¡£
 
-Èç¹ûÏë×öÆ¤·ô¶¨ÖÆ£¬Ö»ĞèÒªĞŞ¸ÄH-ui.admin.css µÚ10¡ª¡ª23ĞĞ´úÂë¡£
-
-Í¬Ê±£¬H-ui.adminÒ²Ìá¹©¶¨ÖÆ·şÎñ£¡£¨ÎªÁËÉú´æ£¬¶¨ÖÆĞèÒªÊÕÈ¡Ò»Ğ©ÊÕ·ÑÅ¶~£©
+Èç¹ûÏë×öÆ¤·ô¶¨ÖÆ£¬Ö»ĞèÒª½«skinÎÄ¼şÏÂµÄÈÎÒâÒ»¸öÅú¸´ÎÄ¼ş¸´ÖÆ³öÀ´Ò»·İ½øĞĞĞŞ¸Ä¾ÍĞĞ¡£
 
 H-uiÒ»Ö±±ü³Ğ¡°²»Çó¶àìÅ£¬ÊµÓÃÎªÖ÷£¡¡±µÄ×ÚÖ¼,Îª¹ã´ó¹¤³ÌÊ¦Ìá¹©×îÊµÓÃ£¬×îÒ×ÓÃµÄÇ°¶Ë´úÂë¡£
 
@@ -16,324 +14,70 @@ H-uiÒ»Ö±±ü³Ğ¡°²»Çó¶àìÅ£¬ÊµÓÃÎªÖ÷£¡¡±µÄ×ÚÖ¼,Îª¹ã´ó¹¤³ÌÊ¦Ìá¹©×îÊµÓÃ£¬×îÒ×ÓÃµÄÇ°¶Ë´
 
 --------------ÓÃĞÄ×öÕ¾£¬×ö²»Ò»ÑùµÄÕ¾--------------
 ==========================================================
-\¸ß¸ßÊÖ\WWW.GOGOUP.COM\ADMIN
-©¦  _blank.html				¿Õ°×Ò³(Ã¿´ÎÎÒÃÇ¶¼ÄÃ¿Õ°×Ò³È¥´´½¨£¬ÕâÑù±È½Ï¸É¾»£¡)
-©¦  _footer.html			Ò³½Å¹«¹²´úÂëÆ¬¶Î
-©¦  _header.html			Í·²¿¹«¹²´úÂëÆ¬¶Î
-©¦  _meta.html				meta¹«¹²´úÂëÆ¬¶Î
-©¦  robots.txt				ËÑË÷ÒıÇæÅÀ³æÅäÖÃÎÄ¼ş
-©¦  login.html				¹ÜÀíÔ±µÇÂ½
-©¦  index.html				Ê×Ò³(Ö÷¿ò¼Ü)
-©¦  welcome.html			ÎÒµÄ×ÀÃæ£¨Ä¬ÈÏÓÀÔ¶´ò¿ªµÄÒ³Ãæ£©
-©¦  ÓÃ»§ÖĞĞÄ
-©¦  user-add.html			ÓÃ»§Ìí¼Ó
-©¦  user-list				ÓÃ»§¹ÜÀí(list)
-©¦  user-view.html			ÓÃ»§ĞÅÏ¢(pop)
-©¦  ×ÊÑ¶¹ÜÀí
-©¦  artice-class.html			×ÊÑ¶·ÖÀà
+\¸ùÄ¿Â¼
+©À©¤©¤ _blank.html				¿Õ°×Ò³(Ã¿´ÎÎÒÃÇ¶¼ÄÃ¿Õ°×Ò³È¥´´½¨£¬ÕâÑù±È½Ï¸É¾»£¡)
+©À©¤©¤ _footer.html				Ò³½Å¹«¹²´úÂëÆ¬¶Î
+©À©¤©¤ _header.html				Í·²¿¹«¹²´úÂëÆ¬¶Î
+©À©¤©¤ _meta.html				meta¹«¹²´úÂëÆ¬¶Î
+©À©¤©¤ robots.txt				ËÑË÷ÒıÇæÅÀ³æÅäÖÃÎÄ¼ş
+©À©¤©¤ login.html				¹ÜÀíÔ±µÇÂ½
+©À©¤©¤ index.html				Ê×Ò³(Ö÷¿ò¼Ü)
+©À©¤©¤ welcome.html				ÎÒµÄ×ÀÃæ£¨Ä¬ÈÏÓÀÔ¶´ò¿ªµÄÒ³Ãæ£©
+©À©¤©¤ member-¿ªÍ·µÄ				ÓÃ»§Ïà¹Ø
+©À©¤©¤ artice-¿ªÍ·µÄ				×ÊÑ¶Ïà¹Ø
+©À©¤©¤ picture-¿ªÍ·µÄ				Í¼Æ¬Ïà¹Ø
+©À©¤©¤ product-¿ªÍ·µÄ				²úÆ·Ïà¹Ø
+©À©¤©¤ page-¿ªÍ·µÄ				Ò³ÃæÏà¹Ø
+©À©¤©¤ system-¿ªÍ·µÄ				ÏµÍ³Ïà¹Ø
+©À©¤©¤ admin-¿ªÍ·µÄ				¹ÜÀíÔ±Ïà¹Ø
+©À©¤©¤ charts-¿ªÍ·µÄ				Í³¼ÆÏà¹Ø
+			¡­¡­
+static/	×ÊÔ´
 
-©¦  artice-add.html			×ÊÑ¶Ìí¼Ó
-©¦  artice-list.html			×ÊÑ¶¹ÜÀí(list)
-©¦  artice-view.html			×ÊÑ¶Ô¤ÀÀ(pop)
-©¦  Í¼Æ¬¿â
-©¦  picture-class.html			Í¼Æ¬·ÖÀà
-©¦  picture-add.html			Í¼Æ¬Ìí¼Ó
-©¦  picture-list.html			Í¼Æ¬¹ÜÀí(list)
-©¦  picture-show.html			Í¼Æ¬Ô¤ÀÀ(pop)
-©¦  ²úÆ·¿â
-©¦  product-brand.html			Æ·ÅÆ¹ÜÀí
-©¦  product-class.html			²úÆ··ÖÀà
-©¦  product-add.html			²úÆ·Ìí¼Ó(list)
-©¦  product-list.html			²úÆ·ÁĞ±í(list)
-
-©¦  product-show.html			²úÆ·Ô¤ÀÀ(pop)
-©¦  Ò³Ãæ¹ÜÀí
-©¦  page-moban.html			Ä£°æ¹ÜÀí
-
-©¦  page-flink.html			ÓÑÇéÁ´½Ó
-
-©¦  ÏµÍ³¹ÜÀí
-©¦  system-base.html			»ù±¾ÉèÖÃ
-
-©¦  system-lanmu.html			À¸Ä¿ÉèÖÃ
-
-©¦  system-data.html			Êı¾İ×Öµä
-©¦  system-log.html			ÏµÍ³ÈÕÖ¾(list)
-
-©¦  ¹ÜÀíÔ±¹ÜÀí
-©¦  admin-list.html			¹ÜÀíÔ±-ÁĞ±í
-©¦  admin-password-edit.html		¹ÜÀíÔ±-ÃÜÂë-±à¼­£¨pop£©
-©¦  admin-role-edit.html		¹ÜÀíÔ±-½ÇÉ«-±à¼­£¨pop£©
-©¦  admin-role.html			¹ÜÀíÔ±-½ÇÉ«
-©¦  Í³¼Æ¹ÜÀí
-©¦  tongji-list.html	Í³¼ÆÁĞ±í(list)
-
-
-©À©¤css
-©¦      dropzone.css			ÍÏ×§ÉÏ´«²å¼şÑùÊ½
-©¦      H-ui.admin.css			H-ui.adminÑùÊ½
-©¦      H-ui.css			h-ui CSS¿â
-©¦      H-ui.login.css			H-ui.adminºóÌ¨µÇÂ¼ÑùÊ½
-©¦      
-©À©¤images				UIÏà¹ØµÄÍ¼Æ¬ËØ²Ä
-©¦      acrossTab-bg.png
-©¦      acrossTab-close.png
-©¦      acrossTab.png
-©¦      admin-login-bg.jpg
-©¦      admin-loginform-bg.png
-©¦      hamburger-retina.gif
-©¦      hamburger.gif
-©¦      icon-add.png
-©¦      icon-pass.png
-©¦      icon-user.png
-©¦      icon_arrow.png
-©¦      icon_jt2.png
-©¦      logo.png
-©¦      sort_asc.png
-©¦      sort_both.png
-©¦      sort_desc.png
-©¦      toTop.png
-©¦      
-©À©¤js
-©¦      ajaxfileupload.js		Òì²½ÉÏ´«ÎÄ¼şµÄjQuery²å¼ş
-©¦      DD_belatedPNG_0.0.8a-min.js	½â¾öIE6pngÍ¸Ã÷
-©¦      de_DE.txt			±í¸ñÅÅĞò²å¼şÓïÑÔÅäÖÃ
-©¦      dropzone.min.js			ÍÏ×§ÉÏ´«²å¼ş
-©¦      H-ui.admin.js			±¾Õ¾Ïà¹ØµÄjs
-©¦      H-ui.js				H-uiºËĞÄ½Å±¾
-©¦      html5.js			html5²å¼ş£¬ÈÃµÍ°æ±¾IEÖ§³Öhtml5ÔªËØ
-©¦      jquery.cookie.js		jQuery.cookie
-©¦      jquery.dataTables.min.js	±í¸ñÅÅĞò²å¼ş
-©¦      jquery.min.js			jQueryÀà¿â
-©¦      page.js				·­Ò³½Å±¾
-©¦      pagenav.cn.js			·­Ò³½Å±¾
-©¦      passwordStrength-min.js		ÃÜÂëÇ¿¶ÈĞ£Ñé
-©¦      preview.js			Í¼Æ¬Ô¤ÀÀ²å¼ş
-©¦      Validform_v5.3.2_min.js		±íµ¥ÑéÖ¤²å¼ş
-©¦
-©À©¤font				×ÖÌåÍ¼±ê²å¼ş
-©¦      fontawesome-webfont.eot
-©¦      fontawesome-webfont.svg
-©¦      fontawesome-webfont.ttf
-©¦      fontawesome-webfont.woff
-©¦      FontAwesome.otf
-©¦      font-awesome-ie7.css		×ÖÌåÍ¼±êÑùÊ½
-©¦      font-awesome-ie7.min.css	×ÖÌåÍ¼±êÑùÊ½Ñ¹Ëõ°æ£¨Ò»°ãÒıÓÃ´Ë°æ£©
-©¦      font-awesome.css		×ÖÌåÍ¼±êÑùÊ½IE7¼æÈİ°æ
-©¦      font-awesome.min.css		×ÖÌåÍ¼±êÑùÊ½IE7¼æÈİÑ¹Ëõ°æ£¨Ò»°ãÒıÓÃ´Ë°æ£©
-©¦
-©À©¤layer				µ¯³ö²ã²å¼ş
-©¦  ©¦	layer.min.js 
-©¦  ©À©¤extend
-©¦  ©¦      layer.ext.js
-©¦  ©¦      
-©¦  ©¸©¤skin
-©¦      ©¦  layer.css
-©¦      ©¦  layer.ext.css
-©¦      ©¦  
-©¦      ©¸©¤default
-©¦              icon_ext.png
-©¦              textbg.png
-©¦              xubox_ico0.png
-©¦              xubox_loading0.gif
-©¦              xubox_loading1.gif
-©¦              xubox_loading2.gif
-©¦              xubox_loading3.gif
-©¦              xubox_title0.png
-©À©¤plugin				²å¼ş
-©¦  ©À©¤datePicker			ÈÕÆÚ²å¼ş
-©¦  ©¦      datePicker-min.css
-©¦  ©¦      datePicker.css
-©¦  ©¦      jquery.bgiframe.min.js
-©¦  ©¦      jquery.datePicker-min.js
-©¦  ©¦      jquery.datePicker.js
-©¦  ©¦               
-©¦  ©À©¤My97DatePicker			My97ÈÕÆÚ²å¼ş
-©¦  ©¦  ©¦  calendar.js
-©¦  ©¦  ©¦  WdatePicker.js
-©¦  ©¦  ©¦  
-©¦  ©¦  ©À©¤lang
-©¦  ©¦  ©¦      en.js
-©¦  ©¦  ©¦      zh-cn.js
-©¦  ©¦  ©¦      zh-tw.js
-©¦  ©¦  ©¦      
-©¦  ©¦  ©¸©¤skin
-©¦  ©¦      ©¦  datePicker.gif
-©¦  ©¦      ©¦  WdatePicker.css
-©¦  ©¦      ©¦  
-©¦  ©¦      ©À©¤default
-©¦  ©¦      ©¦      datepicker.css
-©¦  ©¦      ©¦      img.gif
-©¦  ©¦      ©¦      
-©¦  ©¦      ©À©¤twoer
-©¦  ©¦      ©¦      datepicker-dev.css
-©¦  ©¦      ©¦      datepicker.css
-©¦  ©¦      ©¦      img.gif
-©¦  ©¦      ©¦      img.png
-©¦  ©¦      ©¦      
-©¦  ©¦      ©¸©¤whyGreen
-©¦  ©¦              bg.jpg
-©¦  ©¦              datepicker.css
-©¦  ©¦              img.gif
-©¦  ©¦      
-©¦  ©À©¤swfupload			ÎÄ¼şÉÏ´«²å¼ş
-©¦  ©¦      swfupload.queue-min.js
-©¦  ©¦      swfupload.queue.js
-©¦  ©¦      swfupload.swf
-©¦  ©¦      swfuploadbutton.swf
-©¦  ©¦      swfuploadv2.2-min.js
-©¦  ©¦      swfuploadv2.2.js
-©¦  ©¦      thanks.php
-©¦  ©¦      upload.php
-©¦  ©¦      Validform.swfupload.handler-min.js
-©¦  ©¦      Validform.swfupload.handler.js
-©¦  ©¦      XPButtonUploadText_61x22.png
-©¦  ©¦      
-©¦  ©¸©¤umeditor			°Ù¶È±à¼­Æ÷²å¼ş
-©¦      ©¦  index.html
-©¦      ©¦  umeditor.config.js
-©¦      ©¦  umeditor.js
-©¦      ©¦  umeditor.min.js
-©¦      ©¦  
-©¦      ©À©¤dialogs
-©¦      ©¦  ©À©¤emotion
-©¦      ©¦  ©¦  ©¦  emotion.css
-©¦      ©¦  ©¦  ©¦  emotion.js
-©¦      ©¦  ©¦  ©¦  
-©¦      ©¦  ©¦  ©¸©¤images
-©¦      ©¦  ©¦          0.gif
-©¦      ©¦  ©¦          bface.gif
-©¦      ©¦  ©¦          cface.gif
-©¦      ©¦  ©¦          fface.gif
-©¦      ©¦  ©¦          jxface2.gif
-©¦      ©¦  ©¦          neweditor-tab-bg.png
-©¦      ©¦  ©¦          tface.gif
-©¦      ©¦  ©¦          wface.gif
-©¦      ©¦  ©¦          yface.gif
-©¦      ©¦  ©¦          
-©¦      ©¦  ©À©¤formula
-©¦      ©¦  ©¦  ©¦  formula.css
-©¦      ©¦  ©¦  ©¦  formula.html
-©¦      ©¦  ©¦  ©¦  formula.js
-©¦      ©¦  ©¦  ©¦  
-©¦      ©¦  ©¦  ©¸©¤images
-©¦      ©¦  ©¦          formula.png
-©¦      ©¦  ©¦          
-©¦      ©¦  ©À©¤image
-©¦      ©¦  ©¦  ©¦  image.css
-©¦      ©¦  ©¦  ©¦  image.js
-©¦      ©¦  ©¦  ©¦  
-©¦      ©¦  ©¦  ©¸©¤images
-©¦      ©¦  ©¦          close.png
-©¦      ©¦  ©¦          upload1.png
-©¦      ©¦  ©¦          upload2.png
-©¦      ©¦  ©¦          
-©¦      ©¦  ©À©¤link
-©¦      ©¦  ©¦      link.js
-©¦      ©¦  ©¦      
-©¦      ©¦  ©À©¤map
-©¦      ©¦  ©¦      map.html
-©¦      ©¦  ©¦      map.js
-©¦      ©¦  ©¦      
-©¦      ©¦  ©¸©¤video
-©¦      ©¦      ©¦  video.css
-©¦      ©¦      ©¦  video.js
-©¦      ©¦      ©¦  
-©¦      ©¦      ©¸©¤images
-©¦      ©¦              center_focus.jpg
-©¦      ©¦              left_focus.jpg
-©¦      ©¦              none_focus.jpg
-©¦      ©¦              right_focus.jpg
-©¦      ©¦              
-©¦      ©À©¤jsp
-©¦      ©¦      commons-fileupload-1.2.2.jar
-©¦      ©¦      getContent.jsp
-©¦      ©¦      imageUp.jsp
-©¦      ©¦      ueditor-mini.jar
-©¦      ©¦      Uploader.java
-©¦      ©¦      
-©¦      ©À©¤lang
-©¦      ©¦  ©À©¤en
-©¦      ©¦  ©¦  ©¦  en.js
-©¦      ©¦  ©¦  ©¦  
-©¦      ©¦  ©¦  ©¸©¤images
-©¦      ©¦  ©¦          addimage.png
-©¦      ©¦  ©¦          alldeletebtnhoverskin.png
-©¦      ©¦  ©¦          alldeletebtnupskin.png
-©¦      ©¦  ©¦          background.png
-©¦      ©¦  ©¦          button.png
-©¦      ©¦  ©¦          copy.png
-©¦      ©¦  ©¦          deletedisable.png
-©¦      ©¦  ©¦          deleteenable.png
-©¦      ©¦  ©¦          imglabel.png
-©¦      ©¦  ©¦          listbackground.png
-©¦      ©¦  ©¦          localimage.png
-©¦      ©¦  ©¦          music.png
-©¦      ©¦  ©¦          rotateleftdisable.png
-©¦      ©¦  ©¦          rotateleftenable.png
-©¦      ©¦  ©¦          rotaterightdisable.png
-©¦      ©¦  ©¦          rotaterightenable.png
-©¦      ©¦  ©¦          upload.png
-©¦      ©¦  ©¦          
-©¦      ©¦  ©¸©¤zh-cn
-©¦      ©¦      ©¦  zh-cn.js
-©¦      ©¦      ©¦  
-©¦      ©¦      ©¸©¤images
-©¦      ©¦              copy.png
-©¦      ©¦              imglabel.png
-©¦      ©¦              localimage.png
-©¦      ©¦              music.png
-©¦      ©¦              upload.png
-©¦      ©¦              
-©¦      ©À©¤themes
-©¦      ©¦  ©¸©¤default
-©¦      ©¦      ©À©¤css
-©¦      ©¦      ©¦      umeditor.css
-©¦      ©¦      ©¦      umeditor.min.css
-©¦      ©¦      ©¦      
-©¦      ©¦      ©¸©¤images
-©¦      ©¦              caret.png
-©¦      ©¦              close.png
-©¦      ©¦              icons.gif
-©¦      ©¦              icons.png
-©¦      ©¦              ok.gif
-©¦      ©¦              pop-bg.png
-©¦      ©¦              spacer.gif
-©¦      ©¦              videologo.gif
-©¦      ©¦              
-©¦      ©¸©¤third-party
-©¦          ©¦  jquery.min.js
-©¦          ©¦  
-©¦          ©¸©¤mathquill
-©¦              ©¦  mathquill.css
-©¦              ©¦  mathquill.js
-©¦              ©¦  mathquill.min.js
-©¦              ©¦  
-©¦              ©¸©¤font
-©¦                  ©¦  Symbola.eot
-©¦                  ©¦  Symbola.otf
-©¦                  ©¦  Symbola.svg
-©¦                  ©¦  Symbola.ttf
-©¦                  ©¦  Symbola.woff
-©¦                  ©¦  
-©¦                  ©¸©¤stixgeneral-bundle
-©¦                          STIXFontLicense2010.txt
-©¦                          stixgeneral-webfont.eot
-©¦                          stixgeneral-webfont.svg
-©¦                          stixgeneral-webfont.ttf
-©¦                          stixgeneral-webfont.woff
-©¦                          stixgeneralbol-webfont.eot
-©¦                          stixgeneralbol-webfont.svg
-©¦                          stixgeneralbol-webfont.ttf
-©¦                          stixgeneralbol-webfont.woff
-©¦                          stixgeneralbolita-webfont.eot
-©¦                          stixgeneralbolita-webfont.svg
-©¦                          stixgeneralbolita-webfont.ttf
-©¦                          stixgeneralbolita-webfont.woff
-©¦                          stixgeneralitalic-webfont.eot
-©¦                          stixgeneralitalic-webfont.svg
-©¦                          stixgeneralitalic-webfont.ttf
-©¦                          stixgeneralitalic-webfont.woff
-©¦                          
-©¸©¤temp				ÁÙÊ±Ä¿Â¼
-        card.jpg
+©À©¤©¤ h-ui/			H-uiÌØÓĞ×ÊÔ´
+©¦    ©À©¤©¤ css/			ÑùÊ½
+©¦    ©¦    ©À©¤©¤ H-ui.css			H-ui»ù´¡ÑùÊ½
+©¦    ©¦    ©À©¤©¤ H-ui.min.css			H-ui.css Ñ¹Ëõ°æ
+©¦    ©¦    ©À©¤©¤ H-ui.ie.css			H-ui.css IEµÍ°æ±¾¼æÈİ²¹¶¡
+©¦    ©À©¤©¤ images/			Í¼Æ¬×ÊÔ´
+©¦    ©À©¤©¤ js/
+©¦    ©¦    ©À©¤©¤ H-ui.js			H-uiºËĞÄ½Å±¾
+©À©¤©¤ h-ui.admin/		H-ui.adminºËĞÄ×ÊÔ´
+©¦    ©À©¤©¤ css/			ÑùÊ½
+©¦    ©¦    ©À©¤©¤ H-ui.login.css		ºóÌ¨¹ÜÀíÔ±µÇÂ¼Ò³ÑùÊ½
+©¦    ©¦    ©À©¤©¤ H-ui.admin.css		ºóÌ¨½çÃæÖ÷ÒªÑùÊ½
+©¦    ©À©¤©¤ images/			Í¼Æ¬×ÊÔ´
+©¦    ©À©¤©¤ js/
+©¦    ©¦    ©À©¤©¤ H-ui.admin.js		ºóÌ¨¹ÜÀíºËĞÄ½Å±¾
+©¦    ©À©¤©¤ skin/			Æ¤·ô×ÊÔ´
+©¦    ©¦    ©À©¤©¤ blue				À¶É«
+©¦    ©¦    ©À©¤©¤ default			ºÚÉ«£¨Ä¬ÈÏ£©
+©¦    ©¦    ©À©¤©¤ green			ÂÌÉ«
+©¦    ©¦    ©À©¤©¤ orange			³ÈÉ«
+©¦    ©¦    ©À©¤©¤ red				ºìÉ«
+©¦    ©¦    ©À©¤©¤ yellow			»ÆÉ«
+Lib/	µÚÈı·½²å¼ş
+©À©¤©¤ jquery					jQueryÀà¿â£¨v1.9.1£©
+©À©¤©¤ Hui-iconfont				°¢ÀïÍ¼±ê×ÖÌå¿â£¨H-ui¶¨ÖÆ£©
+©À©¤©¤ jquery.SuperSlide			»ÃµÆÆ¬×é¼ş
+©À©¤©¤ Validform				±íµ¥ÑéÖ¤²å¼ş
+©À©¤©¤ jquery.validation			±íµ¥ÑéÖ¤²å¼ş
+©À©¤©¤ My97DatePicker				ÈÕÆÚ²å¼ş
+©À©¤©¤ datatables				±í¸ñ²å¼ş
+©À©¤©¤ nprogress				½ø¶ÈÌõ²å¼ş
+©À©¤©¤ layer					layerµ¯³ö²ã²å¼ş
+©À©¤©¤ laypage					laypage ·­Ò³²å¼ş
+©À©¤©¤ jquery.contextmenu			ÓÒ¼ü²Ëµ¥²å¼ş
+©À©¤©¤ ueditor					°Ù¶È±à¼­Æ÷
+©À©¤©¤ Highcharts				Í¼±í²å¼ş
+©À©¤©¤ echarts					°Ù¶ÈÍ¼±ê²å¼ş
+©À©¤©¤ datatables				±í¸ñÅÅĞò£¬¼ìË÷²å¼ş
+©À©¤©¤ WebUploader				°Ù¶ÈÎÄ¼şÉÏ´«×é¼ş
+©À©¤©¤ lightbox2				Í¼Æ¬Ô¤ÀÀ×é¼ş
+©À©¤©¤ html5shiv.js				html5²å¼ş£¬ÈÃµÍ°æ±¾IEÖ§³Öhtml5ÔªËØ
+©À©¤©¤ DD_belatedPNG_0.0.8a-min.js		½â¾öIE6pngÍ¸Ã÷
+©À©¤©¤ swfobject.js				Flash²å¼ş
+©À©¤©¤ expressInstall.swf  			¼ì²éflash²å¼ş
+©À©¤©¤ respond.min.js				ÈÃIE¼æÈİmedia
+©À©¤©¤ colpick.js				ÑÕÉ«²å¼ş              
+©¸©¤temp				²âÊÔÊı¾İ¡¢Í¼Æ¬
