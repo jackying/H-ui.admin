@@ -187,7 +187,9 @@ $(function(){
 		radioClass: 'iradio-blue',
 		increaseArea: '20%'
 	});
-	$.Huitab("#tab-system .tabBar span","#tab-system .tabCon","current","click","0");
+	$("#tab-system").Huitab({
+		index:0
+	});
 });
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
