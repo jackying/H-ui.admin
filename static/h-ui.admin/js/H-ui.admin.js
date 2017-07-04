@@ -254,7 +254,6 @@ $(function(){
 		}
 	});
 	/*左侧菜单*/
-	
 	$(".Hui-aside").Huifold({
 		titCell:'.menu_dropdown dl dt',
 		mainCell:'.menu_dropdown dl dd',
