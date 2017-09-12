@@ -77,6 +77,7 @@ function Hui_admin_tab(obj){
 		}
 	});
 	if(!bStop){
+
 		creatIframe(href,title);
 		min_titleList();
 	}
@@ -262,6 +263,8 @@ $(function(){
 	/*选项卡导航*/
 	$(".Hui-aside").on("click",".menu_dropdown a",function(){
 		Hui_admin_tab(this);
+		$(".Hui-aside").find(".menu_dropdown dl dd ul li").removeClass("current");
+		$(this).parent().addClass("current");
 	});
 	
 	$(document).on("click","#min_title_list li",function(){

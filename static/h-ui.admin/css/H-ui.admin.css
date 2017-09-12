@@ -45,21 +45,23 @@ h4{line-height:30px}
 	
 #Hui-msg .badge{ position:absolute; left:19px; top:4px; font-size:12px; font-weight:normal; padding:1px 5px}
 /*左侧菜单*/
-.Hui-aside .menu_dropdown dl{ margin-bottom:0}
-.Hui-aside .menu_dropdown dt{display:block;line-height:35px;padding-left:15px;cursor:pointer;position:relative;border-bottom: 1px solid #e5e5e5;font-weight:normal}
-.Hui-aside .menu_dropdown dt .menu_dropdown-arrow{ position:absolute;overflow: hidden; top:0; right:15px;transition-duration:0.3s ;transition-property:all}
-.Hui-aside .menu_dropdown dd{ display:none}
-.Hui-aside .menu_dropdown dt.selected .menu_dropdown-arrow{transform: rotate(180deg)}
-.Hui-aside .menu_dropdown dd.selected{display:block; margin-left:0px}
-.Hui-aside .menu_dropdown ul{padding:0px}
-.Hui-aside .menu_dropdown li{line-height:35px;overflow:hidden;zoom:1}
-.Hui-aside .menu_dropdown li a{padding-left:15px; display:block;font-weight: bold; margin:0}
-.Hui-aside .menu_dropdown li a i{ font-weight: normal}
-.Hui-aside .menu_dropdown dd ul{padding:3px 8px}
-.Hui-aside .menu_dropdown dd li{line-height:32px}
-.Hui-aside .menu_dropdown dd li a{line-height:32px;padding-left:26px; border-bottom:none; font-weight:normal}
-.Hui-aside .menu_dropdown li a:hover{text-decoration:none}
-.Hui-aside .menu_dropdown li.current a,.menu_dropdown li.current a:hover{background-color:rgba(255,255,255,0.2)}
+.Hui-aside .menu_dropdown > dl{ margin-bottom:0}
+.Hui-aside .menu_dropdown > dl > dt{display:block;line-height:35px;padding-left:15px;cursor:pointer;position:relative;border-bottom: 1px solid #e5e5e5;font-weight:normal}
+.Hui-aside .menu_dropdown > dl > dt .menu_dropdown-arrow{ position:absolute;overflow: hidden; top:0; right:15px;transition-duration:0.3s ;transition-property:all}
+.Hui-aside .menu_dropdown > dl > dd{ display:none}
+.Hui-aside .menu_dropdown > dl > dt.selected .menu_dropdown-arrow{transform: rotate(180deg)}
+.Hui-aside .menu_dropdown > dl > dd.selected{display:block; margin-left:0px}
+.Hui-aside .menu_dropdown > dl > dd > ul{padding:0px}
+.Hui-aside .menu_dropdown > dl > dd > ul > li{line-height:35px;overflow:hidden;zoom:1}
+.Hui-aside .menu_dropdown > dl > dd > ul > li > a{padding-left:15px; display:block;font-weight: bold; margin:0}
+.Hui-aside .menu_dropdown > dl > dd > ul > li > a i{ font-weight: normal}
+.Hui-aside .menu_dropdown > dl > dd > ul{padding:3px 8px}
+.Hui-aside .menu_dropdown > dl > dd > ul > li{line-height:32px}
+.Hui-aside .menu_dropdown > dl > dd > ul > li > a{line-height:32px;padding-left:26px; border-bottom:none; font-weight:normal}
+.Hui-aside .menu_dropdown > dl > dd > ul > li > a:hover{text-decoration:none}
+.Hui-aside .menu_dropdown > dl > dd > ul > li.current > a,
+.Hui-aside .menu_dropdown > dl > dd > ul > li.current > a:hover{background-color:rgba(255,255,255,0.2)}
+
 /*菜单收缩切换*/
 .dislpayArrow{position: absolute;top: 0;bottom: 0;left:200px;width:0px; height:100%;z-index:10}
 .dislpayArrow a{ position:absolute; display:block; width:17px; height:61px;top:50%; margin-top:-30px;outline:none}
