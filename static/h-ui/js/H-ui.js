@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.6
+* H-ui.js v3.1.9
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.08.30
+* Date modified 2017.11.13
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -31,12 +31,12 @@ jQuery.Huisidenav.js
 jQuery.Huihover.js v2.0
 jQuery.Huifocusblur.js V2.0
 jQuery.Huiselect.js
-jQuery.Huitab.js v2.0
+jQuery.Huitab.js v2.0.1
 jQuery.Huifold.js v2.0
 jQuery.Huitags.js v2.0
 jQuery.Huitagsmixed.js
 jQuery.Huitextarealength.js v2.0
-jQuery.Huipreview.js v2.0
+jQuery.Huipreview.js v2.1
 jQuery.Huimodalalert.js
 jQuery.Huialert.js
 jQuery.Huitotop.js v2.0
@@ -4434,17 +4434,17 @@ function displaynavbar(obj){
 } (window.jQuery);
 
 /* =======================================================================
- * jQuery.Huitab.js v2.0 选项卡
+ * jQuery.Huitab.js v2.0.1 选项卡
  * http://www.h-ui.net/
  * Created & Modified by guojunhui
- * Date modified 2017.05.05
+ * Date modified 2017.10.10
  *
  * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
 !function($) {
-	$.fn.Huitab = function(options){
+	$.fn.Huitab = function(options, callback){
 		var defaults = {
 			tabBar:'.tabBar span',
 			tabCon:".tabCon",
@@ -4466,6 +4466,9 @@ function displaynavbar(obj){
 				var index = that.find(options.tabBar).index(this);
 				that.find(options.tabCon).hide();
 				that.find(options.tabCon).eq(index).show();
+				if (callback) {
+					callback();
+				}
 			});
 		});
 	}
@@ -4748,30 +4751,30 @@ function displaynavbar(obj){
 } (window.jQuery);
 
 /* =======================================================================
- * jQuery.Huipreview.js v2.0 图片预览
+ * jQuery.Huipreview.js v2.1 图片预览
  * http://www.h-ui.net/
  * Created & Modified by guojunhui
- * Date modified 2017.05.05
+ * Date modified 2017.11.13
  *
  * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
-!function($) {
-	$.fn.Huipreview = function(options){
+!function ($) {
+	$.fn.Huipreview = function (options) {
 		var defaults = {
-			className:"active",
+			className: "active",
 			bigImgWidth: 300,
-		}
+		};
 		var options = $.extend(defaults, options);
-		this.each(function(){
+		this.each(function () {
 			var that = $(this);
 			var timer;
 			that.hover(
-				function() {
+				function () {
 					clearTimeout(timer);
 					timer = setTimeout(function () {
-						$("#tooltip-preview").remove();
+						$("#preview-wraper").remove();
 						var smallImg = that.find("img").attr("src");
 						var bigImg = that.attr('data-src');
 						var bigImgW = that.attr('data-width');
@@ -4783,41 +4786,41 @@ function displaynavbar(obj){
 						var imgW = that.parent().width();
 						var imgH = that.parent().height();
 						var ww = (imgL + imgW / 2);
-						var tooltipLeft = "auto",tooltipRight = "auto";
+						var tooltipLeft = "auto", tooltipRight = "auto";
 						if (ww < winW5) {
 							tooltipLeft = (imgW + imgL) + "px";
 						} else {
 							tooltipRight = (winW - imgL) + "px";
 						}
-						
-						that.addClass(options.className);				
+
+						that.addClass(options.className);
 						if (bigImg == '') {
 							return false;
-						} else {						
-							var tooltip_keleyi_com = 
-							'<div id="preview-wraper" style="position: absolute;width:'+options.bigImgWidth+'px;height:auto;top:' + imgT + 'px;right:' + tooltipRight + ';left:' + tooltipLeft + '">'+
-								'<img src="'+smallImg+'" width="'+options.bigImgWidth+'">'+
-							'</div>';
+						} else {
+							var tooltip_keleyi_com =
+								'<div id="preview-wraper" style="position: absolute;z-index:999;width:' + options.bigImgWidth + 'px;height:auto;top:' + imgT + 'px;right:' + tooltipRight + ';left:' + tooltipLeft + '">' +
+								'<img src="' + smallImg + '" width="' + options.bigImgWidth + '">' +
+								'</div>';
 							$("body").append(tooltip_keleyi_com);
 							/*图片预加载*/
 							var image = new Image();
 							image.src = bigImg;
 							/*创建一个Image对象*/
-							image.onload = function() {
-								$('#preview-wraper').find("img").attr("src",bigImg).css("width",options.bigImgWidth);
+							image.onload = function () {
+								$('#preview-wraper').find("img").attr("src", bigImg).css("width", options.bigImgWidth);
 							};
 						}
-					},500);
+					}, 500);
 				},
-				function() {
+				function () {
 					clearTimeout(timer);
 					that.removeClass(options.className);
 					$("#preview-wraper").remove();
 				}
 			);
 		});
-	}	
-} (window.jQuery);
+	}
+}(window.jQuery);
 
 /* =======================================================================
  * jQuery.Huimodalalert.js alert
@@ -4837,8 +4840,7 @@ function displaynavbar(obj){
 		}
 	}
 	$.Huimodalalert.hide = function() {
-		$("#modal-alert").fadeOut("normal",
-		function() {
+		$("#modal-alert").fadeOut("normal",function() {
 			$("#modal-alert").remove();
 		});
 	}
@@ -4849,11 +4851,10 @@ function displaynavbar(obj){
  * ========================================================================*/
 !function($) {
 	$.Huialert = function() {
-		$(".Huialert i").Huihover();
-		$(".Huialert i").on("click",function() {
+		$('.Huialert i').Huihover();
+		$(document).on("click",".Huialert i",function() {
 			var Huialert = $(this).parents(".Huialert");
-			Huialert.fadeOut("normal",
-			function() {
+			Huialert.fadeOut("normal",function() {
 				Huialert.remove();
 			});
 		});

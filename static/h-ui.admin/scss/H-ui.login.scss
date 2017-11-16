@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* -----------H-ui前端框架-------------
+* H-ui.login.scss v2.2.2	后台登录页样式
+* http://www.h-ui.net/
+* Created & Modified by guojunhui
+* Date modified 2017.11.14
+*
+* Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
+* Licensed under MIT license.
+* http://opensource.org/licenses/MIT
+*
+*/
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-size: 14px
+}
+
+.header,
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header {
+    top: 0;
+    height: 60px;
+    background: #426374 url(../images/logo.png) no-repeat 0 center
+}
+.footer {
+    height: 46px;
+    line-height: 46px;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    background-color: #426374
+}
+.loginWraper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: #3283AC url(../images/admin-login-bg.jpg) no-repeat center;
+    .loginBox {
+        position: absolute;
+        width: 617px;
+        height: 330px;
+        background: url(../images/admin-loginform-bg.png) no-repeat;
+        left: 50%;
+        top: 50%;
+        margin-left: -309px;
+        margin-top: -184px;
+        padding-top: 38px
+    }
+}
+@media (max-width:617px) {
+    .loginbox {
+        width: 100%;
+        position: static;
+        margin-top: 0;
+        margin-left: 0;
+        .row {
+            margin-top: 20px;
+            .form-label .Hui-iconfont {
+                font-size: 24px
+            }
+            .input-text {
+                width: 360px
+            }
+            .yzm a {
+                color: #426374;
+                font-size: 12px
+            }
+        }
+        
+    }
+}
+
+@media (max-width:617px) {
+    .loginBox .input-text {
+        width: 80%
+    }
+}
+
