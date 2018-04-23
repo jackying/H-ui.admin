@@ -45,22 +45,22 @@ h4{line-height:30px}
 	
 #Hui-msg .badge{ position:absolute; left:19px; top:4px; font-size:12px; font-weight:normal; padding:1px 5px}
 /*左侧菜单*/
-.Hui-aside .menu_dropdown > dl{ margin-bottom:0}
-.Hui-aside .menu_dropdown > dl > dt{display:block;line-height:35px;padding-left:15px;cursor:pointer;position:relative;border-bottom: 1px solid #e5e5e5;font-weight:normal}
-.Hui-aside .menu_dropdown > dl > dt .menu_dropdown-arrow{ position:absolute;overflow: hidden; top:0; right:15px;transition-duration:0.3s ;transition-property:all}
-.Hui-aside .menu_dropdown > dl > dd{ display:none}
-.Hui-aside .menu_dropdown > dl > dt.selected .menu_dropdown-arrow{transform: rotate(180deg)}
-.Hui-aside .menu_dropdown > dl > dd.selected{display:block; margin-left:0px}
-.Hui-aside .menu_dropdown > dl > dd > ul{padding:0px}
-.Hui-aside .menu_dropdown > dl > dd > ul > li{line-height:35px;overflow:hidden;zoom:1}
-.Hui-aside .menu_dropdown > dl > dd > ul > li > a{padding-left:15px; display:block;font-weight: bold; margin:0}
-.Hui-aside .menu_dropdown > dl > dd > ul > li > a i{ font-weight: normal}
-.Hui-aside .menu_dropdown > dl > dd > ul{padding:3px 8px}
-.Hui-aside .menu_dropdown > dl > dd > ul > li{line-height:32px}
-.Hui-aside .menu_dropdown > dl > dd > ul > li > a{line-height:32px;padding-left:26px; border-bottom:none; font-weight:normal}
-.Hui-aside .menu_dropdown > dl > dd > ul > li > a:hover{text-decoration:none}
-.Hui-aside .menu_dropdown > dl > dd > ul > li.current > a,
-.Hui-aside .menu_dropdown > dl > dd > ul > li.current > a:hover{background-color:rgba(255,255,255,0.2)}
+.Hui-aside .menu_dropdown ul { padding:0px}
+.Hui-aside .menu_dropdown ul li { line-height:35px;overflow:hidden;zoom:1}
+.Hui-aside .menu_dropdown ul li a { padding-left:15px;line-height:35px; display:block;font-weight: bold; margin:0;border-bottom: 1px solid #e5e5e5;}
+.Hui-aside .menu_dropdown ul li a:hover { text-decoration: none;}
+.Hui-aside .menu_dropdown dl{ margin-bottom:0}
+.Hui-aside .menu_dropdown dl > dt {display:block;line-height:35px;padding-left:15px;cursor:pointer;position:relative;border-bottom: 1px solid #e5e5e5;font-weight:normal}
+.Hui-aside .menu_dropdown dl > dt .menu_dropdown-arrow { position:absolute;overflow: hidden; top:0; right:15px;transition-duration:0.3s ;transition-property:all}
+.Hui-aside .menu_dropdown dl > dd { display:none}
+.Hui-aside .menu_dropdown dl > dt.selected .menu_dropdown-arrow {transform: rotate(180deg)}
+.Hui-aside .menu_dropdown dl > dd.selected {display:block; margin-left:0px}
+.Hui-aside .menu_dropdown dl > dd > ul{padding:3px 8px}
+.Hui-aside .menu_dropdown dl > dd > ul > li { line-height:35px}
+.Hui-aside .menu_dropdown dl > dd > ul > li > a{ padding-left:26px;font-weight:normal;border-bottom:none;}
+.Hui-aside .menu_dropdown dl > dd > ul > li.current > a,
+.Hui-aside .menu_dropdown dl > dd > ul > li.current > a:hover{background-color:rgba(255,255,255,0.2)}
+.Hui-aside .menu_dropdown dl > dd > ul > li > a i{ font-weight: normal}
 
 /*菜单收缩切换*/
 .dislpayArrow{position: absolute;top: 0;bottom: 0;left:200px;width:0px; height:100%;z-index:10}
@@ -74,7 +74,7 @@ h4{line-height:30px}
 .Hui-tabNav,
 .Hui-tabNav .acrossTab li
 ,.Hui-tabNav .acrossTab li em{background-image:url(../images/acrossTab/acrossTab-2.png)}
-.Hui-tabNav{height:35px; padding-right:75px;overflow:hidden; position:relative;background-color:#efeef0; background-repeat: repeat-x; background-position: 0 -175px;}
+.Hui-tabNav{height:35px; padding-right:75px;overflow:hidden; position:relative;background-color:#efeef0; background-repeat: repeat-x; background-position: 0 -177px;}
 .Hui-tabNav .acrossTab{ position:absolute; height:26px; line-height:26px; background:none; top:8px; left:0;padding-top:0}
 .Hui-tabNav .acrossTab li{height:26px;line-height:26px;}
 .Hui-tabNav .acrossTab li em{ right:-16px; height: 26px; width: 16px}
