@@ -231,7 +231,9 @@ function getHTMLDate(obj) {
     _ww = weekday[d.getDay()];
     obj.html(_yy + "年" + _mm + "月" + _dd + "日 " + _ww);
 };
-
+function toNavPos(){
+	oUl.stop().animate({'left':-num*100},100);
+}
 $(function(){
 	getHTMLDate($("#top_time"));
 	getskincookie();
@@ -304,9 +306,7 @@ $(function(){
 		toNavPos();
 	});
 
-	function toNavPos(){
-		oUl.stop().animate({'left':-num*100},100);
-	}
+
 
 	/*换肤*/
 	$("#Hui-skin .dropDown-menu a").click(function(){
