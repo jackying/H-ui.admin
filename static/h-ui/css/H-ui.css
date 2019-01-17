@@ -1,11 +1,11 @@
 @charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.6
+* H-ui.css v3.1.8
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.11.13
+* Date modified 2019.01.17
 *
-* Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
+* Copyright 2013-2019 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
 * http://opensource.org/licenses/MIT
 *
@@ -55,7 +55,7 @@
 	  3.4.5 spinner 控件
 	  3.4.6 邮箱提示
       3.4.7 表单布局
-	  3.4.8 表单验证	  
+	  3.4.8 表单验证
     3.5 按钮
     3.6 图片
     3.7 图标
@@ -308,7 +308,7 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 	Name:			style_container
 	Example:
 	<div class="responsive">
-	<div class="row cl" role="grid">
+	<div class="row clearfix" role="grid">
 	  <div class="col-1">……</div>
 	  ……
 	</div>
@@ -332,9 +332,38 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 @media print{
 	.container{width:auto}
 }
-.row.cl{}
+
 .row{box-sizing:border-box; margin-left:-15px; margin-right:-15px}
-.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {min-height: 1px;position: relative; padding-left:15px; padding-right:15px; box-sizing:border-box;-webkit-transition:all 0.3s ease-in;
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1,
+.col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
+.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
+.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5,
+.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7,
+.col-xs-8, .col-sm-8, .col-md-8, .col-lg-8,
+.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10,
+.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+	min-height: 1px;
+	position: relative;
+	padding-left:15px;
+	padding-right:15px;
+	box-sizing:border-box;
+	-webkit-transition:all 0.3s ease-in;
 		-moz-transition:all 0.3s ease-in;
 		-o-transition:all 0.3s ease-in;
 			transition:all 0.3s ease-in}
@@ -389,6 +418,7 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 .col-pull-10{right:83.33333%;left:auto}
 .col-push-11{left:91.66667%;right:auto}
 .col-pull-11{right:91.66667%;left:auto}
+
 /*局部模块平分*/
 .col-1-1{ width:100%}
 .col-2-1{ width:50%}
@@ -416,19 +446,21 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 .col-xs-3 {width: 25%}
 .col-xs-2 {width: 16.66666667%}
 .col-xs-1 {width: 8.33333333%}
-.col-xs-pull-12 {right: 100%}
-.col-xs-pull-11 {right: 91.66666667%}
-.col-xs-pull-10 {right: 83.33333333%}
-.col-xs-pull-9 {right: 75%}
-.col-xs-pull-8 {right: 66.66666667%}
-.col-xs-pull-7 {right: 58.33333333%}
-.col-xs-pull-6 {right: 50%}
-.col-xs-pull-5 {right: 41.66666667%}
-.col-xs-pull-4 {right: 33.33333333%}
-.col-xs-pull-3 {right: 25%}
-.col-xs-pull-2 {right: 16.66666667%}
-.col-xs-pull-1 {right: 8.33333333%}
-.col-xs-pull-0 {right: auto}
+
+.col-24-xs-pull-12 {right: 100%}
+.col-24-xs-pull-11 {right: 91.66666667%}
+.col-24-xs-pull-10 {right: 83.33333333%}
+.col-24-xs-pull-9 {right: 75%}
+.col-24-xs-pull-8 {right: 66.66666667%}
+.col-24-xs-pull-7 {right: 58.33333333%}
+.col-24-xs-pull-6 {right: 50%}
+.col-24-xs-pull-5 {right: 41.66666667%}
+.col-24-xs-pull-4 {right: 33.33333333%}
+.col-24-xs-pull-3 {right: 25%}
+.col-24-xs-pull-2 {right: 16.66666667%}
+.col-24-xs-pull-1 {right: 8.33333333%}
+.col-24-xs-pull-0 {right: auto}
+
 .col-xs-push-12 {left: 100%}
 .col-xs-push-11 {left: 91.66666667%}
 .col-xs-push-10 {left: 83.33333333%}
@@ -442,6 +474,7 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 .col-xs-push-2 {left: 16.66666667%}
 .col-xs-push-1 {left: 8.33333333%}
 .col-xs-push-0 {left: auto}
+
 .col-xs-offset-12 {margin-left: 100%}
 .col-xs-offset-11 {margin-left: 91.66666667%}
 .col-xs-offset-10 {margin-left: 83.33333333%}
@@ -455,9 +488,12 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 .col-xs-offset-2 {margin-left: 16.66666667%}
 .col-xs-offset-1 {margin-left: 8.33333333%}
 .col-xs-offset-0 {margin-left: 0}
+
 @media (max-width:767px){
-	.responsive [class^="col-"],.responsive [class*=" col-"]{float:none!important;width:auto!important}
-	.responsive [class^="col-offset-"],.responsive [class*=" col-offset-"]{ margin-left:0!important}
+	.responsive [class^="col-"],
+	.responsive [class*=" col-"] {float:none!important;width:auto!important}
+	.responsive [class^="col-offset-"],
+	.responsive [class*=" col-offset-"]{ margin-left:0!important}
 }
 @media(min-width:768px){
 	.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{float:left}
@@ -473,6 +509,7 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 	.col-sm-3{width:25%}
 	.col-sm-2{width:16.666666666666664%}
 	.col-sm-1{width:8.333333333333332%}
+
 	.col-sm-pull-12{right:100%}
 	.col-sm-pull-11{right:91.66666666666666%}
 	.col-sm-pull-10{right:83.33333333333334%}
@@ -486,6 +523,7 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 	.col-sm-pull-2{right:16.666666666666664%}
 	.col-sm-pull-1{right:8.333333333333332%}
 	.col-sm-pull-0{right:0}
+
 	.col-sm-push-12{left:100%}
 	.col-sm-push-11{left:91.66666666666666%}
 	.col-sm-push-10{left:83.33333333333334%}
@@ -499,6 +537,7 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 	.col-sm-push-2{left:16.666666666666664%}
 	.col-sm-push-1{left:8.333333333333332%}
 	.col-sm-push-0{left:0}
+
 	.col-sm-offset-12{margin-left:100%}
 	.col-sm-offset-11{margin-left:91.66666666666666%}
 	.col-sm-offset-10{margin-left:83.33333333333334%}
@@ -621,6 +660,766 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 	.col-lg-offset-1{margin-left:8.333333333333332%}
 	.col-lg-offset-0{margin-left:0}
 }
+
+/* 24 栅格 */
+.row-24 {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  height: auto;
+  zoom: 1;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.row-24:before,
+.row-24:after {
+  content: " ";
+  display: table;
+}
+.row-24:after {
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
+
+.col-24-1, .col-24-xs-1, .col-24-sm-1, .col-24-md-1, .col-24-lg-1, .col-24-xl-1, .col-24-xxl-1,
+.col-24-2, .col-24-xs-2, .col-24-sm-2, .col-24-md-2, .col-24-lg-2, .col-24-xl-2, .col-24-xxl-2,
+.col-24-3, .col-24-xs-3, .col-24-sm-3, .col-24-md-3, .col-24-lg-3, .col-24-xl-3, .col-24-xxl-3,
+.col-24-4, .col-24-xs-4, .col-24-sm-4, .col-24-md-4, .col-24-lg-4, .col-24-xl-4, .col-24-xxl-4,
+.col-24-5, .col-24-xs-5, .col-24-sm-5, .col-24-md-5, .col-24-lg-5, .col-24-xl-5, .col-24-xxl-5,
+.col-24-6, .col-24-xs-6, .col-24-sm-6, .col-24-md-6, .col-24-lg-6, .col-24-xl-6, .col-24-xxl-6,
+.col-24-7, .col-24-xs-7, .col-24-sm-7, .col-24-md-7, .col-24-lg-7, .col-24-xl-7, .col-24-xxl-7,
+.col-24-8, .col-24-xs-8, .col-24-sm-8, .col-24-md-8, .col-24-lg-8, .col-24-xl-8, .col-24-xxl-8,
+.col-24-9, .col-24-xs-9, .col-24-sm-9, .col-24-md-9, .col-24-lg-9, .col-24-xl-9, .col-24-xxl-9,
+.col-24-10, .col-24-xs-10, .col-24-sm-10, .col-24-md-10, .col-24-lg-10, .col-24-xl-10, .col-24-xxl-10,
+.col-24-11, .col-24-xs-11, .col-24-sm-11, .col-24-md-11, .col-24-lg-11, .col-24-xl-11, .col-24-xxl-11,
+.col-24-12, .col-24-xs-12, .col-24-sm-12, .col-24-md-12, .col-24-lg-12, .col-24-xl-12, .col-24-xxl-12,
+.col-24-13, .col-24-xs-13, .col-24-sm-13, .col-24-md-13, .col-24-lg-13, .col-24-xl-13, .col-24-xxl-13,
+.col-24-14, .col-24-xs-14, .col-24-sm-14, .col-24-md-14, .col-24-lg-14, .col-24-xl-14, .col-24-xxl-14,
+.col-24-15, .col-24-xs-15, .col-24-sm-15, .col-24-md-15, .col-24-lg-15, .col-24-xl-15, .col-24-xxl-15,
+.col-24-16, .col-24-xs-16, .col-24-sm-16, .col-24-md-16, .col-24-lg-16, .col-24-xl-16, .col-24-xxl-16,
+.col-24-17, .col-24-xs-17, .col-24-sm-17, .col-24-md-17, .col-24-lg-17, .col-24-xl-17, .col-24-xxl-17,
+.col-24-18, .col-24-xs-18, .col-24-sm-18, .col-24-md-18, .col-24-lg-18, .col-24-xl-18, .col-24-xxl-18,
+.col-24-19, .col-24-xs-19, .col-24-sm-19, .col-24-md-19, .col-24-lg-19, .col-24-xl-19, .col-24-xxl-19,
+.col-24-20, .col-24-xs-20, .col-24-sm-20, .col-24-md-20, .col-24-lg-20, .col-24-xl-20, .col-24-xxl-20,
+.col-24-21, .col-24-xs-21, .col-24-sm-21, .col-24-md-21, .col-24-lg-21, .col-24-xl-21, .col-24-xxl-21,
+.col-24-22, .col-24-xs-22, .col-24-sm-22, .col-24-md-22, .col-24-lg-22, .col-24-xl-22, .col-24-xxl-22,
+.col-24-23, .col-24-xs-23, .col-24-sm-23, .col-24-md-23, .col-24-lg-23, .col-24-xl-23, .col-24-xxl-23,
+.col-24-24, .col-24-xs-24, .col-24-sm-24, .col-24-md-24, .col-24-lg-24, .col-24-xl-24, .col-24-xxl-24 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+	box-sizing:border-box;
+	-webkit-transition:all 0.3s ease-in;
+	-moz-transition:all 0.3s ease-in;
+	-o-transition:all 0.3s ease-in;
+	transition:all 0.3s ease-in;
+}
+.col-24-xs-1, .col-24-xs-2, .col-24-xs-3, .col-24-xs-4, .col-24-xs-5, .col-24-xs-6,
+.col-24-xs-7, .col-24-xs-8, .col-24-xs-9, .col-24-xs-10, .col-24-xs-11, .col-24-xs-12,
+.col-24-xs-13, .col-24-xs-14, .col-24-xs-15, .col-24-xs-16, .col-24-xs-17, .col-24-xs-18,
+.col-24-xs-19, .col-24-xs-20, .col-24-xs-21, .col-24-xs-22, .col-24-xs-23, .col-24-xs-24 {
+	float: left;
+}
+.col-24-xs-24 {width: 100%}
+.col-24-xs-23 {width: 95.83333333%}
+.col-24-xs-22 {width: 91.66666667%}
+
+.col-24-xs-21 {width: 87.5%}
+.col-24-xs-20 {width: 83.33333333%}
+.col-24-xs-19 {width: 79.16666667%}
+
+.col-24-xs-18 {width: 75%}
+.col-24-xs-17 {width: 70.83333333%}
+.col-24-xs-16 {width: 66.66666667%}
+
+.col-24-xs-15 {width: 62.5%}
+.col-24-xs-14 {width: 58.33333333%}
+.col-24-xs-13 {width: 54.16666667%}
+
+.col-24-xs-12 {width: 50%}
+.col-24-xs-11 {width: 45.83333333%}
+.col-24-xs-10 {width: 41.66666667%}
+
+.col-24-xs-9  {width: 37.5%}
+.col-24-xs-8  {width: 33.33333333%}
+.col-24-xs-7  {width: 29.16666667%}
+
+.col-24-xs-6  {width: 25%}
+.col-24-xs-5  {width: 20.83333333%}
+.col-24-xs-4  {width: 16.66666667%}
+
+.col-24-xs-3  {width: 12.5%}
+.col-24-xs-2  {width: 8.33333333%}
+.col-24-xs-1  {width: 4.16666667%}
+
+.col-24-xs-pull-24 {right: 100%}
+.col-24-xs-pull-23 {right: 95.83333333%}
+.col-24-xs-pull-22 {right: 91.66666667%}
+.col-24-xs-pull-21 {right: 87.5%}
+.col-24-xs-pull-20 {right: 83.33333333%}
+.col-24-xs-pull-19 {right: 79.16666667%}
+.col-24-xs-pull-18 {right: 75%}
+.col-24-xs-pull-17 {right: 70.83333333%}
+.col-24-xs-pull-16 {right: 66.66666667%}
+.col-24-xs-pull-15 {right: 62.5%}
+.col-24-xs-pull-14 {right: 58.33333333%}
+.col-24-xs-pull-13 {right: 54.16666667%}
+.col-24-xs-pull-12 {right: 50%}
+.col-24-xs-pull-11 {right: 45.83333333%}
+.col-24-xs-pull-10 {right: 41.66666667%}
+.col-24-xs-pull-9 {right: 37.5%}
+.col-24-xs-pull-8 {right: 33.33333333%}
+.col-24-xs-pull-7 {right: 29.16666667%}
+.col-24-xs-pull-6 {right: 25%}
+.col-24-xs-pull-5 {right: 20.83333333%}
+.col-24-xs-pull-4 {right: 16.66666667%}
+.col-24-xs-pull-3 {right: 12.5%}
+.col-24-xs-pull-2 {right: 8.33333333%}
+.col-24-xs-pull-1 {right: 4.16666667%}
+.col-24-xs-pull-0 {right: auto}
+
+.col-24-xs-push-24 {left: 100%}
+.col-24-xs-push-23 {left: 95.83333333%}
+.col-24-xs-push-22 {left: 91.66666667%}
+.col-24-xs-push-21 {left: 87.5%}
+.col-24-xs-push-20 {left: 83.33333333%}
+.col-24-xs-push-19 {left: 79.16666667%}
+.col-24-xs-push-18 {left: 75%}
+.col-24-xs-push-17 {left: 70.83333333%}
+.col-24-xs-push-16 {left: 66.66666667%}
+.col-24-xs-push-15 {left: 62.5%}
+.col-24-xs-push-14 {left: 58.33333333%}
+.col-24-xs-push-13 {left: 54.16666667%}
+.col-24-xs-push-12 {left: 50%}
+.col-24-xs-push-11 {left: 45.83333333%}
+.col-24-xs-push-10 {left: 41.66666667%}
+.col-24-xs-push-9 {left: 37.5%}
+.col-24-xs-push-8 {left: 33.33333333%}
+.col-24-xs-push-7 {left: 29.16666667%}
+.col-24-xs-push-6 {left: 25%}
+.col-24-xs-push-5 {left: 20.83333333%}
+.col-24-xs-push-4 {left: 16.66666667%}
+.col-24-xs-push-3 {left: 12.5%}
+.col-24-xs-push-2 {left: 8.33333333%}
+.col-24-xs-push-1 {left: 4.16666667%}
+.col-24-xs-push-0 {left: auto}
+
+.col-24-xs-offset-24 {margin-left: 100%}
+.col-24-xs-offset-23 {margin-left: 95.83333333%}
+.col-24-xs-offset-22 {margin-left: 91.66666667%}
+.col-24-xs-offset-21 {margin-left: 87.5%}
+.col-24-xs-offset-20 {margin-left: 83.33333333%}
+.col-24-xs-offset-19 {margin-left: 79.16666667%}
+.col-24-xs-offset-18 {margin-left: 75%}
+.col-24-xs-offset-17 {margin-left: 70.83333333%}
+.col-24-xs-offset-16 {margin-left: 66.66666667%}
+.col-24-xs-offset-15 {margin-left: 62.5%}
+.col-24-xs-offset-14 {margin-left: 58.33333333%}
+.col-24-xs-offset-13 {margin-left: 54.16666667%}
+.col-24-xs-offset-12 {margin-left: 50%}
+.col-24-xs-offset-11 {margin-left: 45.83333333%}
+.col-24-xs-offset-10 {margin-left: 41.66666667%}
+.col-24-xs-offset-9 {margin-left: 37.5%}
+.col-24-xs-offset-8 {margin-left: 33.33333333%}
+.col-24-xs-offset-7 {margin-left: 29.16666667%}
+.col-24-xs-offset-6 {margin-left: 25%}
+.col-24-xs-offset-5 {margin-left: 20.83333333%}
+.col-24-xs-offset-4 {margin-left: 16.66666667%}
+.col-24-xs-offset-3 {margin-left: 12.5%}
+.col-24-xs-offset-2 {margin-left: 8.33333333%}
+.col-24-xs-offset-1 {margin-left: 4.16666667%}
+.col-24-xs-offset-0 {margin-left: 0}
+
+@media(min-width: 676px) {
+	.col-24-sm-1, .col-24-sm-2, .col-24-sm-3, .col-24-sm-4, .col-24-sm-5, .col-24-sm-6,
+	.col-24-sm-7, .col-24-sm-8, .col-24-sm-9, .col-24-sm-10, .col-24-sm-11, .col-24-sm-12,
+	.col-24-sm-13, .col-24-sm-14, .col-24-sm-15, .col-24-sm-16, .col-24-sm-17, .col-24-sm-18,
+	.col-24-sm-19, .col-24-sm-20, .col-24-sm-21, .col-24-sm-22, .col-24-sm-23, .col-24-sm-24 {
+		float: left;
+	}
+	.col-24-sm-24 {width: 100%}
+	.col-24-sm-23 {width: 95.83333333%}
+	.col-24-sm-22 {width: 91.66666667%}
+
+	.col-24-sm-21 {width: 87.5%}
+	.col-24-sm-20 {width: 83.33333333%}
+	.col-24-sm-19 {width: 79.16666667%}
+
+	.col-24-sm-18 {width: 75%}
+	.col-24-sm-17 {width: 70.83333333%}
+	.col-24-sm-16 {width: 66.66666667%}
+
+	.col-24-sm-15 {width: 62.5%}
+	.col-24-sm-14 {width: 58.33333333%}
+	.col-24-sm-13 {width: 54.16666667%}
+
+	.col-24-sm-12 {width: 50%}
+	.col-24-sm-11 {width: 45.83333333%}
+	.col-24-sm-10 {width: 41.66666667%}
+
+	.col-24-sm-9  {width: 37.5%}
+	.col-24-sm-8  {width: 33.33333333%}
+	.col-24-sm-7  {width: 29.16666667%}
+
+	.col-24-sm-6  {width: 25%}
+	.col-24-sm-5  {width: 20.83333333%}
+	.col-24-sm-4  {width: 16.66666667%}
+
+	.col-24-sm-3  {width: 12.5%}
+	.col-24-sm-2  {width: 8.33333333%}
+	.col-24-sm-1  {width: 4.16666667%}
+
+	.col-24-sm-pull-24 {right: 100%}
+	.col-24-sm-pull-23 {right: 95.83333333%}
+	.col-24-sm-pull-22 {right: 91.66666667%}
+	.col-24-sm-pull-21 {right: 87.5%}
+	.col-24-sm-pull-20 {right: 83.33333333%}
+	.col-24-sm-pull-19 {right: 79.16666667%}
+	.col-24-sm-pull-18 {right: 75%}
+	.col-24-sm-pull-17 {right: 70.83333333%}
+	.col-24-sm-pull-16 {right: 66.66666667%}
+	.col-24-sm-pull-15 {right: 62.5%}
+	.col-24-sm-pull-14 {right: 58.33333333%}
+	.col-24-sm-pull-13 {right: 54.16666667%}
+	.col-24-sm-pull-12 {right: 50%}
+	.col-24-sm-pull-11 {right: 45.83333333%}
+	.col-24-sm-pull-10 {right: 41.66666667%}
+	.col-24-sm-pull-9 {right: 37.5%}
+	.col-24-sm-pull-8 {right: 33.33333333%}
+	.col-24-sm-pull-7 {right: 29.16666667%}
+	.col-24-sm-pull-6 {right: 25%}
+	.col-24-sm-pull-5 {right: 20.83333333%}
+	.col-24-sm-pull-4 {right: 16.66666667%}
+	.col-24-sm-pull-3 {right: 12.5%}
+	.col-24-sm-pull-2 {right: 8.33333333%}
+	.col-24-sm-pull-1 {right: 4.16666667%}
+	.col-24-sm-pull-0 {right: auto}
+
+	.col-24-sm-push-24 {left: 100%}
+	.col-24-sm-push-23 {left: 95.83333333%}
+	.col-24-sm-push-22 {left: 91.66666667%}
+	.col-24-sm-push-21 {left: 87.5%}
+	.col-24-sm-push-20 {left: 83.33333333%}
+	.col-24-sm-push-19 {left: 79.16666667%}
+	.col-24-sm-push-18 {left: 75%}
+	.col-24-sm-push-17 {left: 70.83333333%}
+	.col-24-sm-push-16 {left: 66.66666667%}
+	.col-24-sm-push-15 {left: 62.5%}
+	.col-24-sm-push-14 {left: 58.33333333%}
+	.col-24-sm-push-13 {left: 54.16666667%}
+	.col-24-sm-push-12 {left: 50%}
+	.col-24-sm-push-11 {left: 45.83333333%}
+	.col-24-sm-push-10 {left: 41.66666667%}
+	.col-24-sm-push-9 {left: 37.5%}
+	.col-24-sm-push-8 {left: 33.33333333%}
+	.col-24-sm-push-7 {left: 29.16666667%}
+	.col-24-sm-push-6 {left: 25%}
+	.col-24-sm-push-5 {left: 20.83333333%}
+	.col-24-sm-push-4 {left: 16.66666667%}
+	.col-24-sm-push-3 {left: 12.5%}
+	.col-24-sm-push-2 {left: 8.33333333%}
+	.col-24-sm-push-1 {left: 4.16666667%}
+	.col-24-sm-push-0 {left: auto}
+
+	.col-24-sm-offset-24 {margin-left: 100%}
+	.col-24-sm-offset-23 {margin-left: 95.83333333%}
+	.col-24-sm-offset-22 {margin-left: 91.66666667%}
+	.col-24-sm-offset-21 {margin-left: 87.5%}
+	.col-24-sm-offset-20 {margin-left: 83.33333333%}
+	.col-24-sm-offset-19 {margin-left: 79.16666667%}
+	.col-24-sm-offset-18 {margin-left: 75%}
+	.col-24-sm-offset-17 {margin-left: 70.83333333%}
+	.col-24-sm-offset-16 {margin-left: 66.66666667%}
+	.col-24-sm-offset-15 {margin-left: 62.5%}
+	.col-24-sm-offset-14 {margin-left: 58.33333333%}
+	.col-24-sm-offset-13 {margin-left: 54.16666667%}
+	.col-24-sm-offset-12 {margin-left: 50%}
+	.col-24-sm-offset-11 {margin-left: 45.83333333%}
+	.col-24-sm-offset-10 {margin-left: 41.66666667%}
+	.col-24-sm-offset-9 {margin-left: 37.5%}
+	.col-24-sm-offset-8 {margin-left: 33.33333333%}
+	.col-24-sm-offset-7 {margin-left: 29.16666667%}
+	.col-24-sm-offset-6 {margin-left: 25%}
+	.col-24-sm-offset-5 {margin-left: 20.83333333%}
+	.col-24-sm-offset-4 {margin-left: 16.66666667%}
+	.col-24-sm-offset-3 {margin-left: 12.5%}
+	.col-24-sm-offset-2 {margin-left: 8.33333333%}
+	.col-24-sm-offset-1 {margin-left: 4.16666667%}
+	.col-24-sm-offset-0 {margin-left: 0}
+}
+@media(min-width: 768px) {
+	.col-24-md-1, .col-24-md-2, .col-24-md-3, .col-24-md-4, .col-24-md-5, .col-24-md-6,
+	.col-24-md-7, .col-24-md-8, .col-24-md-9, .col-24-md-10, .col-24-md-11, .col-24-md-12,
+	.col-24-md-13, .col-24-md-14, .col-24-md-15, .col-24-md-16, .col-24-md-17, .col-24-md-18,
+	.col-24-md-19, .col-24-md-20, .col-24-md-21, .col-24-md-22, .col-24-md-23, .col-24-md-24 {
+		float: left;
+	}
+	.col-24-md-24 {width: 100%}
+	.col-24-md-23 {width: 95.83333333%}
+	.col-24-md-22 {width: 91.66666667%}
+
+	.col-24-md-21 {width: 87.5%}
+	.col-24-md-20 {width: 83.33333333%}
+	.col-24-md-19 {width: 79.16666667%}
+
+	.col-24-md-18 {width: 75%}
+	.col-24-md-17 {width: 70.83333333%}
+	.col-24-md-16 {width: 66.66666667%}
+
+	.col-24-md-15 {width: 62.5%}
+	.col-24-md-14 {width: 58.33333333%}
+	.col-24-md-13 {width: 54.16666667%}
+
+	.col-24-md-12 {width: 50%}
+	.col-24-md-11 {width: 45.83333333%}
+	.col-24-md-10 {width: 41.66666667%}
+
+	.col-24-md-9  {width: 37.5%}
+	.col-24-md-8  {width: 33.33333333%}
+	.col-24-md-7  {width: 29.16666667%}
+
+	.col-24-md-6  {width: 25%}
+	.col-24-md-5  {width: 20.83333333%}
+	.col-24-md-4  {width: 16.66666667%}
+
+	.col-24-md-3  {width: 12.5%}
+	.col-24-md-2  {width: 8.33333333%}
+	.col-24-md-1  {width: 4.16666667%}
+
+	.col-24-md-pull-24 {right: 100%}
+	.col-24-md-pull-23 {right: 95.83333333%}
+	.col-24-md-pull-22 {right: 91.66666667%}
+	.col-24-md-pull-21 {right: 87.5%}
+	.col-24-md-pull-20 {right: 83.33333333%}
+	.col-24-md-pull-19 {right: 79.16666667%}
+	.col-24-md-pull-18 {right: 75%}
+	.col-24-md-pull-17 {right: 70.83333333%}
+	.col-24-md-pull-16 {right: 66.66666667%}
+	.col-24-md-pull-15 {right: 62.5%}
+	.col-24-md-pull-14 {right: 58.33333333%}
+	.col-24-md-pull-13 {right: 54.16666667%}
+	.col-24-md-pull-12 {right: 50%}
+	.col-24-md-pull-11 {right: 45.83333333%}
+	.col-24-md-pull-10 {right: 41.66666667%}
+	.col-24-md-pull-9 {right: 37.5%}
+	.col-24-md-pull-8 {right: 33.33333333%}
+	.col-24-md-pull-7 {right: 29.16666667%}
+	.col-24-md-pull-6 {right: 25%}
+	.col-24-md-pull-5 {right: 20.83333333%}
+	.col-24-md-pull-4 {right: 16.66666667%}
+	.col-24-md-pull-3 {right: 12.5%}
+	.col-24-md-pull-2 {right: 8.33333333%}
+	.col-24-md-pull-1 {right: 4.16666667%}
+	.col-24-md-pull-0 {right: auto}
+
+	.col-24-md-push-24 {left: 100%}
+	.col-24-md-push-23 {left: 95.83333333%}
+	.col-24-md-push-22 {left: 91.66666667%}
+	.col-24-md-push-21 {left: 87.5%}
+	.col-24-md-push-20 {left: 83.33333333%}
+	.col-24-md-push-19 {left: 79.16666667%}
+	.col-24-md-push-18 {left: 75%}
+	.col-24-md-push-17 {left: 70.83333333%}
+	.col-24-md-push-16 {left: 66.66666667%}
+	.col-24-md-push-15 {left: 62.5%}
+	.col-24-md-push-14 {left: 58.33333333%}
+	.col-24-md-push-13 {left: 54.16666667%}
+	.col-24-md-push-12 {left: 50%}
+	.col-24-md-push-11 {left: 45.83333333%}
+	.col-24-md-push-10 {left: 41.66666667%}
+	.col-24-md-push-9 {left: 37.5%}
+	.col-24-md-push-8 {left: 33.33333333%}
+	.col-24-md-push-7 {left: 29.16666667%}
+	.col-24-md-push-6 {left: 25%}
+	.col-24-md-push-5 {left: 20.83333333%}
+	.col-24-md-push-4 {left: 16.66666667%}
+	.col-24-md-push-3 {left: 12.5%}
+	.col-24-md-push-2 {left: 8.33333333%}
+	.col-24-md-push-1 {left: 4.16666667%}
+	.col-24-md-push-0 {left: auto}
+
+	.col-24-md-offset-24 {margin-left: 100%}
+	.col-24-md-offset-23 {margin-left: 95.83333333%}
+	.col-24-md-offset-22 {margin-left: 91.66666667%}
+	.col-24-md-offset-21 {margin-left: 87.5%}
+	.col-24-md-offset-20 {margin-left: 83.33333333%}
+	.col-24-md-offset-19 {margin-left: 79.16666667%}
+	.col-24-md-offset-18 {margin-left: 75%}
+	.col-24-md-offset-17 {margin-left: 70.83333333%}
+	.col-24-md-offset-16 {margin-left: 66.66666667%}
+	.col-24-md-offset-15 {margin-left: 62.5%}
+	.col-24-md-offset-14 {margin-left: 58.33333333%}
+	.col-24-md-offset-13 {margin-left: 54.16666667%}
+	.col-24-md-offset-12 {margin-left: 50%}
+	.col-24-md-offset-11 {margin-left: 45.83333333%}
+	.col-24-md-offset-10 {margin-left: 41.66666667%}
+	.col-24-md-offset-9 {margin-left: 37.5%}
+	.col-24-md-offset-8 {margin-left: 33.33333333%}
+	.col-24-md-offset-7 {margin-left: 29.16666667%}
+	.col-24-md-offset-6 {margin-left: 25%}
+	.col-24-md-offset-5 {margin-left: 20.83333333%}
+	.col-24-md-offset-4 {margin-left: 16.66666667%}
+	.col-24-md-offset-3 {margin-left: 12.5%}
+	.col-24-md-offset-2 {margin-left: 8.33333333%}
+	.col-24-md-offset-1 {margin-left: 4.16666667%}
+	.col-24-md-offset-0 {margin-left: 0}
+}
+@media(min-width: 992px) {
+	.col-24-lg-1, .col-24-lg-2, .col-24-lg-3, .col-24-lg-4, .col-24-lg-5, .col-24-lg-6,
+	.col-24-lg-7, .col-24-lg-8, .col-24-lg-9, .col-24-lg-10, .col-24-lg-11, .col-24-lg-12,
+	.col-24-lg-13, .col-24-lg-14, .col-24-lg-15, .col-24-lg-16, .col-24-lg-17, .col-24-lg-18,
+	.col-24-lg-19, .col-24-lg-20, .col-24-lg-21, .col-24-lg-22, .col-24-lg-23, .col-24-lg-24 {
+		float: left;
+	}
+	.col-24-lg-24 {width: 100%}
+	.col-24-lg-23 {width: 95.83333333%}
+	.col-24-lg-22 {width: 91.66666667%}
+
+	.col-24-lg-21 {width: 87.5%}
+	.col-24-lg-20 {width: 83.33333333%}
+	.col-24-lg-19 {width: 79.16666667%}
+
+	.col-24-lg-18 {width: 75%}
+	.col-24-lg-17 {width: 70.83333333%}
+	.col-24-lg-16 {width: 66.66666667%}
+
+	.col-24-lg-15 {width: 62.5%}
+	.col-24-lg-14 {width: 58.33333333%}
+	.col-24-lg-13 {width: 54.16666667%}
+
+	.col-24-lg-12 {width: 50%}
+	.col-24-lg-11 {width: 45.83333333%}
+	.col-24-lg-10 {width: 41.66666667%}
+
+	.col-24-lg-9  {width: 37.5%}
+	.col-24-lg-8  {width: 33.33333333%}
+	.col-24-lg-7  {width: 29.16666667%}
+
+	.col-24-lg-6  {width: 25%}
+	.col-24-lg-5  {width: 20.83333333%}
+	.col-24-lg-4  {width: 16.66666667%}
+
+	.col-24-lg-3  {width: 12.5%}
+	.col-24-lg-2  {width: 8.33333333%}
+	.col-24-lg-1  {width: 4.16666667%}
+
+	.col-24-lg-pull-24 {right: 100%}
+	.col-24-lg-pull-23 {right: 95.83333333%}
+	.col-24-lg-pull-22 {right: 91.66666667%}
+	.col-24-lg-pull-21 {right: 87.5%}
+	.col-24-lg-pull-20 {right: 83.33333333%}
+	.col-24-lg-pull-19 {right: 79.16666667%}
+	.col-24-lg-pull-18 {right: 75%}
+	.col-24-lg-pull-17 {right: 70.83333333%}
+	.col-24-lg-pull-16 {right: 66.66666667%}
+	.col-24-lg-pull-15 {right: 62.5%}
+	.col-24-lg-pull-14 {right: 58.33333333%}
+	.col-24-lg-pull-13 {right: 54.16666667%}
+	.col-24-lg-pull-12 {right: 50%}
+	.col-24-lg-pull-11 {right: 45.83333333%}
+	.col-24-lg-pull-10 {right: 41.66666667%}
+	.col-24-lg-pull-9 {right: 37.5%}
+	.col-24-lg-pull-8 {right: 33.33333333%}
+	.col-24-lg-pull-7 {right: 29.16666667%}
+	.col-24-lg-pull-6 {right: 25%}
+	.col-24-lg-pull-5 {right: 20.83333333%}
+	.col-24-lg-pull-4 {right: 16.66666667%}
+	.col-24-lg-pull-3 {right: 12.5%}
+	.col-24-lg-pull-2 {right: 8.33333333%}
+	.col-24-lg-pull-1 {right: 4.16666667%}
+	.col-24-lg-pull-0 {right: auto}
+
+	.col-24-lg-push-24 {left: 100%}
+	.col-24-lg-push-23 {left: 95.83333333%}
+	.col-24-lg-push-22 {left: 91.66666667%}
+	.col-24-lg-push-21 {left: 87.5%}
+	.col-24-lg-push-20 {left: 83.33333333%}
+	.col-24-lg-push-19 {left: 79.16666667%}
+	.col-24-lg-push-18 {left: 75%}
+	.col-24-lg-push-17 {left: 70.83333333%}
+	.col-24-lg-push-16 {left: 66.66666667%}
+	.col-24-lg-push-15 {left: 62.5%}
+	.col-24-lg-push-14 {left: 58.33333333%}
+	.col-24-lg-push-13 {left: 54.16666667%}
+	.col-24-lg-push-12 {left: 50%}
+	.col-24-lg-push-11 {left: 45.83333333%}
+	.col-24-lg-push-10 {left: 41.66666667%}
+	.col-24-lg-push-9 {left: 37.5%}
+	.col-24-lg-push-8 {left: 33.33333333%}
+	.col-24-lg-push-7 {left: 29.16666667%}
+	.col-24-lg-push-6 {left: 25%}
+	.col-24-lg-push-5 {left: 20.83333333%}
+	.col-24-lg-push-4 {left: 16.66666667%}
+	.col-24-lg-push-3 {left: 12.5%}
+	.col-24-lg-push-2 {left: 8.33333333%}
+	.col-24-lg-push-1 {left: 4.16666667%}
+	.col-24-lg-push-0 {left: auto}
+
+	.col-24-lg-offset-24 {margin-left: 100%}
+	.col-24-lg-offset-23 {margin-left: 95.83333333%}
+	.col-24-lg-offset-22 {margin-left: 91.66666667%}
+	.col-24-lg-offset-21 {margin-left: 87.5%}
+	.col-24-lg-offset-20 {margin-left: 83.33333333%}
+	.col-24-lg-offset-19 {margin-left: 79.16666667%}
+	.col-24-lg-offset-18 {margin-left: 75%}
+	.col-24-lg-offset-17 {margin-left: 70.83333333%}
+	.col-24-lg-offset-16 {margin-left: 66.66666667%}
+	.col-24-lg-offset-15 {margin-left: 62.5%}
+	.col-24-lg-offset-14 {margin-left: 58.33333333%}
+	.col-24-lg-offset-13 {margin-left: 54.16666667%}
+	.col-24-lg-offset-12 {margin-left: 50%}
+	.col-24-lg-offset-11 {margin-left: 45.83333333%}
+	.col-24-lg-offset-10 {margin-left: 41.66666667%}
+	.col-24-lg-offset-9 {margin-left: 37.5%}
+	.col-24-lg-offset-8 {margin-left: 33.33333333%}
+	.col-24-lg-offset-7 {margin-left: 29.16666667%}
+	.col-24-lg-offset-6 {margin-left: 25%}
+	.col-24-lg-offset-5 {margin-left: 20.83333333%}
+	.col-24-lg-offset-4 {margin-left: 16.66666667%}
+	.col-24-lg-offset-3 {margin-left: 12.5%}
+	.col-24-lg-offset-2 {margin-left: 8.33333333%}
+	.col-24-lg-offset-1 {margin-left: 4.16666667%}
+	.col-24-lg-offset-0 {margin-left: 0}
+}
+@media(min-width: 1200px) {
+	.col-24-xl-1, .col-24-xl-2, .col-24-xl-3, .col-24-xl-4, .col-24-xl-5, .col-24-xl-6,
+	.col-24-xl-7, .col-24-xl-8, .col-24-xl-9, .col-24-xl-10, .col-24-xl-11, .col-24-xl-12,
+	.col-24-xl-13, .col-24-xl-14, .col-24-xl-15, .col-24-xl-16, .col-24-xl-17, .col-24-xl-18,
+	.col-24-xl-19, .col-24-xl-20, .col-24-xl-21, .col-24-xl-22, .col-24-xl-23, .col-24-xl-24 {
+		float: left;
+	}
+	.col-24-xl-24 {width: 100%}
+	.col-24-xl-23 {width: 95.83333333%}
+	.col-24-xl-22 {width: 91.66666667%}
+
+	.col-24-xl-21 {width: 87.5%}
+	.col-24-xl-20 {width: 83.33333333%}
+	.col-24-xl-19 {width: 79.16666667%}
+
+	.col-24-xl-18 {width: 75%}
+	.col-24-xl-17 {width: 70.83333333%}
+	.col-24-xl-16 {width: 66.66666667%}
+
+	.col-24-xl-15 {width: 62.5%}
+	.col-24-xl-14 {width: 58.33333333%}
+	.col-24-xl-13 {width: 54.16666667%}
+
+	.col-24-xl-12 {width: 50%}
+	.col-24-xl-11 {width: 45.83333333%}
+	.col-24-xl-10 {width: 41.66666667%}
+
+	.col-24-xl-9  {width: 37.5%}
+	.col-24-xl-8  {width: 33.33333333%}
+	.col-24-xl-7  {width: 29.16666667%}
+
+	.col-24-xl-6  {width: 25%}
+	.col-24-xl-5  {width: 20.83333333%}
+	.col-24-xl-4  {width: 16.66666667%}
+
+	.col-24-xl-3  {width: 12.5%}
+	.col-24-xl-2  {width: 8.33333333%}
+	.col-24-xl-1  {width: 4.16666667%}
+
+	.col-24-xl-pull-24 {right: 100%}
+	.col-24-xl-pull-23 {right: 95.83333333%}
+	.col-24-xl-pull-22 {right: 91.66666667%}
+	.col-24-xl-pull-21 {right: 87.5%}
+	.col-24-xl-pull-20 {right: 83.33333333%}
+	.col-24-xl-pull-19 {right: 79.16666667%}
+	.col-24-xl-pull-18 {right: 75%}
+	.col-24-xl-pull-17 {right: 70.83333333%}
+	.col-24-xl-pull-16 {right: 66.66666667%}
+	.col-24-xl-pull-15 {right: 62.5%}
+	.col-24-xl-pull-14 {right: 58.33333333%}
+	.col-24-xl-pull-13 {right: 54.16666667%}
+	.col-24-xl-pull-12 {right: 50%}
+	.col-24-xl-pull-11 {right: 45.83333333%}
+	.col-24-xl-pull-10 {right: 41.66666667%}
+	.col-24-xl-pull-9 {right: 37.5%}
+	.col-24-xl-pull-8 {right: 33.33333333%}
+	.col-24-xl-pull-7 {right: 29.16666667%}
+	.col-24-xl-pull-6 {right: 25%}
+	.col-24-xl-pull-5 {right: 20.83333333%}
+	.col-24-xl-pull-4 {right: 16.66666667%}
+	.col-24-xl-pull-3 {right: 12.5%}
+	.col-24-xl-pull-2 {right: 8.33333333%}
+	.col-24-xl-pull-1 {right: 4.16666667%}
+	.col-24-xl-pull-0 {right: auto}
+
+	.col-24-xl-push-24 {left: 100%}
+	.col-24-xl-push-23 {left: 95.83333333%}
+	.col-24-xl-push-22 {left: 91.66666667%}
+	.col-24-xl-push-21 {left: 87.5%}
+	.col-24-xl-push-20 {left: 83.33333333%}
+	.col-24-xl-push-19 {left: 79.16666667%}
+	.col-24-xl-push-18 {left: 75%}
+	.col-24-xl-push-17 {left: 70.83333333%}
+	.col-24-xl-push-16 {left: 66.66666667%}
+	.col-24-xl-push-15 {left: 62.5%}
+	.col-24-xl-push-14 {left: 58.33333333%}
+	.col-24-xl-push-13 {left: 54.16666667%}
+	.col-24-xl-push-12 {left: 50%}
+	.col-24-xl-push-11 {left: 45.83333333%}
+	.col-24-xl-push-10 {left: 41.66666667%}
+	.col-24-xl-push-9 {left: 37.5%}
+	.col-24-xl-push-8 {left: 33.33333333%}
+	.col-24-xl-push-7 {left: 29.16666667%}
+	.col-24-xl-push-6 {left: 25%}
+	.col-24-xl-push-5 {left: 20.83333333%}
+	.col-24-xl-push-4 {left: 16.66666667%}
+	.col-24-xl-push-3 {left: 12.5%}
+	.col-24-xl-push-2 {left: 8.33333333%}
+	.col-24-xl-push-1 {left: 4.16666667%}
+	.col-24-xl-push-0 {left: auto}
+
+	.col-24-xl-offset-24 {margin-left: 100%}
+	.col-24-xl-offset-23 {margin-left: 95.83333333%}
+	.col-24-xl-offset-22 {margin-left: 91.66666667%}
+	.col-24-xl-offset-21 {margin-left: 87.5%}
+	.col-24-xl-offset-20 {margin-left: 83.33333333%}
+	.col-24-xl-offset-19 {margin-left: 79.16666667%}
+	.col-24-xl-offset-18 {margin-left: 75%}
+	.col-24-xl-offset-17 {margin-left: 70.83333333%}
+	.col-24-xl-offset-16 {margin-left: 66.66666667%}
+	.col-24-xl-offset-15 {margin-left: 62.5%}
+	.col-24-xl-offset-14 {margin-left: 58.33333333%}
+	.col-24-xl-offset-13 {margin-left: 54.16666667%}
+	.col-24-xl-offset-12 {margin-left: 50%}
+	.col-24-xl-offset-11 {margin-left: 45.83333333%}
+	.col-24-xl-offset-10 {margin-left: 41.66666667%}
+	.col-24-xl-offset-9 {margin-left: 37.5%}
+	.col-24-xl-offset-8 {margin-left: 33.33333333%}
+	.col-24-xl-offset-7 {margin-left: 29.16666667%}
+	.col-24-xl-offset-6 {margin-left: 25%}
+	.col-24-xl-offset-5 {margin-left: 20.83333333%}
+	.col-24-xl-offset-4 {margin-left: 16.66666667%}
+	.col-24-xl-offset-3 {margin-left: 12.5%}
+	.col-24-xl-offset-2 {margin-left: 8.33333333%}
+	.col-24-xl-offset-1 {margin-left: 4.16666667%}
+	.col-24-xl-offset-0 {margin-left: 0}
+}
+@media(min-width: 1600px) {
+	.col-24-xxl-1, .col-24-xxl-2, .col-24-xxl-3, .col-24-xxl-4, .col-24-xxl-5, .col-24-xxl-6,
+	.col-24-xxl-7, .col-24-xxl-8, .col-24-xxl-9, .col-24-xxl-10, .col-24-xxl-11, .col-24-xxl-12,
+	.col-24-xxl-13, .col-24-xxl-14, .col-24-xxl-15, .col-24-xxl-16, .col-24-xxl-17, .col-24-xxl-18,
+	.col-24-xxl-19, .col-24-xxl-20, .col-24-xxl-21, .col-24-xxl-22, .col-24-xxl-23, .col-24-xxl-24 {
+		float: left;
+	}
+	.col-24-xxl-24 {width: 100%}
+	.col-24-xxl-23 {width: 95.83333333%}
+	.col-24-xxl-22 {width: 91.66666667%}
+
+	.col-24-xxl-21 {width: 87.5%}
+	.col-24-xxl-20 {width: 83.33333333%}
+	.col-24-xxl-19 {width: 79.16666667%}
+
+	.col-24-xxl-18 {width: 75%}
+	.col-24-xxl-17 {width: 70.83333333%}
+	.col-24-xxl-16 {width: 66.66666667%}
+
+	.col-24-xxl-15 {width: 62.5%}
+	.col-24-xxl-14 {width: 58.33333333%}
+	.col-24-xxl-13 {width: 54.16666667%}
+
+	.col-24-xxl-12 {width: 50%}
+	.col-24-xxl-11 {width: 45.83333333%}
+	.col-24-xxl-10 {width: 41.66666667%}
+
+	.col-24-xxl-9  {width: 37.5%}
+	.col-24-xxl-8  {width: 33.33333333%}
+	.col-24-xxl-7  {width: 29.16666667%}
+
+	.col-24-xxl-6  {width: 25%}
+	.col-24-xxl-5  {width: 20.83333333%}
+	.col-24-xxl-4  {width: 16.66666667%}
+
+	.col-24-xxl-3  {width: 12.5%}
+	.col-24-xxl-2  {width: 8.33333333%}
+	.col-24-xxl-1  {width: 4.16666667%}
+
+	.col-24-xxl-pull-24 {right: 100%}
+	.col-24-xxl-pull-23 {right: 95.83333333%}
+	.col-24-xxl-pull-22 {right: 91.66666667%}
+	.col-24-xxl-pull-21 {right: 87.5%}
+	.col-24-xxl-pull-20 {right: 83.33333333%}
+	.col-24-xxl-pull-19 {right: 79.16666667%}
+	.col-24-xxl-pull-18 {right: 75%}
+	.col-24-xxl-pull-17 {right: 70.83333333%}
+	.col-24-xxl-pull-16 {right: 66.66666667%}
+	.col-24-xxl-pull-15 {right: 62.5%}
+	.col-24-xxl-pull-14 {right: 58.33333333%}
+	.col-24-xxl-pull-13 {right: 54.16666667%}
+	.col-24-xxl-pull-12 {right: 50%}
+	.col-24-xxl-pull-11 {right: 45.83333333%}
+	.col-24-xxl-pull-10 {right: 41.66666667%}
+	.col-24-xxl-pull-9 {right: 37.5%}
+	.col-24-xxl-pull-8 {right: 33.33333333%}
+	.col-24-xxl-pull-7 {right: 29.16666667%}
+	.col-24-xxl-pull-6 {right: 25%}
+	.col-24-xxl-pull-5 {right: 20.83333333%}
+	.col-24-xxl-pull-4 {right: 16.66666667%}
+	.col-24-xxl-pull-3 {right: 12.5%}
+	.col-24-xxl-pull-2 {right: 8.33333333%}
+	.col-24-xxl-pull-1 {right: 4.16666667%}
+	.col-24-xxl-pull-0 {right: auto}
+
+	.col-24-xxl-push-24 {left: 100%}
+	.col-24-xxl-push-23 {left: 95.83333333%}
+	.col-24-xxl-push-22 {left: 91.66666667%}
+	.col-24-xxl-push-21 {left: 87.5%}
+	.col-24-xxl-push-20 {left: 83.33333333%}
+	.col-24-xxl-push-19 {left: 79.16666667%}
+	.col-24-xxl-push-18 {left: 75%}
+	.col-24-xxl-push-17 {left: 70.83333333%}
+	.col-24-xxl-push-16 {left: 66.66666667%}
+	.col-24-xxl-push-15 {left: 62.5%}
+	.col-24-xxl-push-14 {left: 58.33333333%}
+	.col-24-xxl-push-13 {left: 54.16666667%}
+	.col-24-xxl-push-12 {left: 50%}
+	.col-24-xxl-push-11 {left: 45.83333333%}
+	.col-24-xxl-push-10 {left: 41.66666667%}
+	.col-24-xxl-push-9 {left: 37.5%}
+	.col-24-xxl-push-8 {left: 33.33333333%}
+	.col-24-xxl-push-7 {left: 29.16666667%}
+	.col-24-xxl-push-6 {left: 25%}
+	.col-24-xxl-push-5 {left: 20.83333333%}
+	.col-24-xxl-push-4 {left: 16.66666667%}
+	.col-24-xxl-push-3 {left: 12.5%}
+	.col-24-xxl-push-2 {left: 8.33333333%}
+	.col-24-xxl-push-1 {left: 4.16666667%}
+	.col-24-xxl-push-0 {left: auto}
+
+	.col-24-xxl-offset-24 {margin-left: 100%}
+	.col-24-xxl-offset-23 {margin-left: 95.83333333%}
+	.col-24-xxl-offset-22 {margin-left: 91.66666667%}
+	.col-24-xxl-offset-21 {margin-left: 87.5%}
+	.col-24-xxl-offset-20 {margin-left: 83.33333333%}
+	.col-24-xxl-offset-19 {margin-left: 79.16666667%}
+	.col-24-xxl-offset-18 {margin-left: 75%}
+	.col-24-xxl-offset-17 {margin-left: 70.83333333%}
+	.col-24-xxl-offset-16 {margin-left: 66.66666667%}
+	.col-24-xxl-offset-15 {margin-left: 62.5%}
+	.col-24-xxl-offset-14 {margin-left: 58.33333333%}
+	.col-24-xxl-offset-13 {margin-left: 54.16666667%}
+	.col-24-xxl-offset-12 {margin-left: 50%}
+	.col-24-xxl-offset-11 {margin-left: 45.83333333%}
+	.col-24-xxl-offset-10 {margin-left: 41.66666667%}
+	.col-24-xxl-offset-9 {margin-left: 37.5%}
+	.col-24-xxl-offset-8 {margin-left: 33.33333333%}
+	.col-24-xxl-offset-7 {margin-left: 29.16666667%}
+	.col-24-xxl-offset-6 {margin-left: 25%}
+	.col-24-xxl-offset-5 {margin-left: 20.83333333%}
+	.col-24-xxl-offset-4 {margin-left: 16.66666667%}
+	.col-24-xxl-offset-3 {margin-left: 12.5%}
+	.col-24-xxl-offset-2 {margin-left: 8.33333333%}
+	.col-24-xxl-offset-1 {margin-left: 4.16666667%}
+	.col-24-xxl-offset-0 {margin-left: 0}
+}
+
 /*2.2 响应式隐藏显示
 	Name:			style_Layout
 	Explain:		左右两栏|左中右三栏|上中下
@@ -1097,7 +1896,12 @@ ul.inline > li,ol.inline > li{display:inline-block;*display:inline;padding-right
 .size-XXL{}/*加大*/
 .size-XXXL{}/*超大*/
 
-.input-text,.btn,.input-text.size-M,.btn.size-M{ font-size:14px; height:31px;*height:auto;line-height:1.42857;padding:4px}/*默认为M，可以不写，可以理解为：均码*/
+.input-text,.btn,.input-text.size-M,.btn.size-M {
+  font-size:14px;
+  height:31px;
+  *height:auto;
+  line-height:1.42857;
+  padding:4px 10px;}/*默认为M，可以不写，可以理解为：均码*/
 a.btn,a.btn.size-M,span.btn,span.btn.size-M{ line-height:21px}
 .btn,.btn.size-M{ padding:4px 12px}
 
@@ -1118,11 +1922,18 @@ a.btn.size-XL,span.btn.size-XL{ line-height:26px}
 .btn.size-XL{ padding:10px 24px}
 
 @media (max-width: 767px) {
-	.responsive .input-text.size-MINI,.responsive .btn.size-MINI{height:24px}
-	.responsive .input-text.size-S,.responsive .btn.size-S{ font-size:14px; height:30px}
-	.responsive .input-text,.btn,.responsive .input-text.size-M,.responsive .btn.size-M{ font-size:16px; height:36px}
-	.responsive .input-text.size-L,.responsive .btn.size-L{ font-size:18px; height:42px}
-	.responsive .input-text.size-XL,.responsive .btn.size-XL{ font-size:20px; height:48px}
+	.responsive .input-text.size-MINI,
+	.responsive .btn.size-MINI {height:24px}
+	.responsive .input-text.size-S,
+	.responsive .btn.size-S{ font-size:14px; height:30px}
+	.responsive .input-text,
+	.responsive .btn,
+	.responsive .input-text.size-M,
+	.responsive .btn.size-M{ font-size:16px; height:36px}
+	.responsive .input-text.size-L,
+	.responsive .btn.size-L{ font-size:18px; height:42px}
+	.responsive .input-text.size-XL,
+	.responsive .btn.size-XL{ font-size:20px; height:48px}
 }
 
 /*3.2 代码
@@ -1179,7 +1990,7 @@ table th{text-align:left; font-weight:400}
 .table .table{background-color:#fff}
 
 /*带横向分割线*/
-.table-border{border-top:1px solid #ddd}
+.table-border{border-top:1px solid rgb(102, 65, 65)}
 .table-border th,.table-border td{border-bottom:1px solid #ddd}
 
 /*th带背景*/
@@ -1229,6 +2040,21 @@ table th{text-align:left; font-weight:400}
 .table th.text-l,.table td.text-l{text-align:left!important}/*单独列居左*/
 .table th.text-c,.table td.text-c{text-align:center!important}/*单独列居中*/
 .table th.text-r,.table td.text-r{text-align:right!important}/*单独列居右*/
+
+/*圆角*/
+.table.radius thead th:first-child {
+	border-top-left-radius: 4px;
+}
+.table.radius thead th:last-child {
+	border-top-right-radius: 4px;
+}
+.table.radius tr:last-child td:first-child {
+	border-bottom-left-radius: 4px;
+}
+
+.table.radius tr:last-child td:last-child {
+	border-bottom-right-radius: 4px;
+}
 
 /*datatable*/
 table.dataTable {border-collapse: separate;border-spacing: 0;clear: both}
@@ -1580,10 +2406,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch label.size-S{padding-bottom:3px;padding-top:3px;font-size:12px;line-height:18px}
 .has-switch span.size-L,.has-switch label.size-L{padding-bottom:9px;padding-top:9px;font-size:16px;line-height:normal}
 .has-switch label{text-align:center;margin-top:-1px;margin-bottom:-1px;z-index:100;width:34%;border-left:1px solid #ccc;border-right:1px solid #ccc;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#f5f5f5;
-	background-image:-moz-linear-gradient(top,#fff,#e6e6e6);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
-	background-image:-webkit-linear-gradient(top,#fff,#e6e6e6);
-	background-image:-o-linear-gradient(top,#fff,#e6e6e6);
 	background-image:linear-gradient(to bottom,#fff,#e6e6e6);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
@@ -1611,10 +2434,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 	border-bottom-left-radius:4px
 }
 .has-switch span.switch-right{color:#333;text-shadow:0 1px 1px rgba(255,255,255,0.75);background-color:#f0f0f0;
-	background-image:-moz-linear-gradient(top,#e6e6e6,#fff);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#e6e6e6),to(#fff));
-	background-image:-webkit-linear-gradient(top,#e6e6e6,#fff);
-	background-image:-o-linear-gradient(top,#e6e6e6,#fff);
 	background-image:linear-gradient(to bottom,#e6e6e6,#fff);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6',endColorstr='#ffffffff',GradientType=0);
@@ -1631,10 +2451,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-right.active{background-color:#e6e6e6 \9}
 .has-switch span.switch-primary,
 .has-switch span.switch-left{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#005fcc;
-	background-image:-moz-linear-gradient(top,#04c,#08c);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#04c),to(#08c));
-	background-image:-webkit-linear-gradient(top,#04c,#08c);
-	background-image:-o-linear-gradient(top,#04c,#08c);
 	background-image:linear-gradient(to bottom,#04c,#08c);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0044cc',endColorstr='#ff0088cc',GradientType=0);
@@ -1660,10 +2477,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-primary.active,
 .has-switch span.switch-left.active{background-color:#069 \9}
 .has-switch span.switch-info{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#41a7c5;
-	background-image:-moz-linear-gradient(top,#2f96b4,#5bc0de);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#2f96b4),to(#5bc0de));
-	background-image:-webkit-linear-gradient(top,#2f96b4,#5bc0de);
-	background-image:-o-linear-gradient(top,#2f96b4,#5bc0de);
 	background-image:linear-gradient(to bottom,#2f96b4,#5bc0de);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f96b4',endColorstr='#ff5bc0de',GradientType=0);
@@ -1681,10 +2495,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-info:active,
 .has-switch span.switch-info.active{background-color:#31b0d5 \9}
 .has-switch span.switch-success{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#58b058;
-	background-image:-moz-linear-gradient(top,#51a351,#62c462);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#51a351),to(#62c462));
-	background-image:-webkit-linear-gradient(top,#51a351,#62c462);
-	background-image:-o-linear-gradient(top,#51a351,#62c462);
 	background-image:linear-gradient(to bottom,#51a351,#62c462);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff51a351',endColorstr='#ff62c462',GradientType=0);
@@ -1702,10 +2513,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-success:active,
 .has-switch span.switch-success.active{background-color:#42b142 \9}
 .has-switch span.switch-warning{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#f9a123;
-	background-image:-moz-linear-gradient(top,#f89406,#fbb450);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#f89406),to(#fbb450));
-	background-image:-webkit-linear-gradient(top,#f89406,#fbb450);
-	background-image:-o-linear-gradient(top,#f89406,#fbb450);
 	background-image:linear-gradient(to bottom,#f89406,#fbb450);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff89406',endColorstr='#fffbb450',GradientType=0);
@@ -1723,10 +2531,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-warning:active,
 .has-switch span.switch-warning.active{background-color:#fa9f1e \9}
 .has-switch span.switch-danger{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#d14641;
-	background-image:-moz-linear-gradient(top,#bd362f,#ee5f5b);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#bd362f),to(#ee5f5b));
-	background-image:-webkit-linear-gradient(top,#bd362f,#ee5f5b);
-	background-image:-o-linear-gradient(top,#bd362f,#ee5f5b);
 	background-image:linear-gradient(to bottom,#bd362f,#ee5f5b);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd362f',endColorstr='#ffee5f5b',GradientType=0);
@@ -1760,7 +2565,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 /*方法一、修改源生*/
 .select-box{border:solid 1px #ddd;box-sizing:border-box;vertical-align:middle; width:100%; display:inline-block}
 	.select{border:solid 1px #ddd;box-sizing:border-box;cursor: pointer;line-height:normal;font-weight: normal;width:100%; white-space:nowrap}
-.select-box .select{ border:none}
+.select-box .select{ border:none; background-color: transparent;}
 .select-box.inline,
 .select-box.inline .select{ width:auto}
 
@@ -1880,11 +2685,16 @@ label,.placeholder{font-size:14px}
 .form legend{font-size:20px}/*表单名称*/
 .form .row{margin-top:15px}/*表单行*/
 	.form-label{display:block; color:#555}/*表单标题*/
-	.formControls{position:relative}/*表单控制区*/
-	.formControls > *{vertical-align:middle}
+	.formControls,
+	.form-controls{position:relative}/*表单控制区*/
+	.formControls > *,
+	.form-controls > *{vertical-align:middle}
 	.placeholder{position:absolute; left:4px; top:4px;color:#c6c6c6; cursor:text}/*表单默认值*/
-.form-horizontal .form-label{margin-top:3px;cursor:text;text-align:right}
-.form-horizontal .Validform_checktip{ margin-top:5px}
+.form-horizontal .form-label{cursor:text;text-align:right;line-height: 28px;}
+.form-horizontal .form-controls {
+  line-height: 28px;
+}
+.form-horizontal .Validform_checktip{ margin-top:5px;}
 /*设置placeholder颜色*/
 ::-webkit-input-placeholder {color:#b3b3b3}/* WebKit browsers */
 :-moz-placeholder {color:#b3b3b3}/* Mozilla Firefox 4 to 18 */
@@ -3057,9 +3867,9 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 /*4.2.1 导航条
 	Name:			mod_nav
 	Example:
-<header class="navbar-wrapper">
+<header class="Hui-navbar">
 	<nav class="nav navbar-nav nav-collapse" role="navigation" id="Hui-navbar">
-		<ul class="cl">
+		<ul class="clearfix">
 			<li class="current"><a href="/">首页</a></li>
 			<li><a href="#">核心</a></li>
 			<li><a href="#">扩展</a></li>
@@ -3089,7 +3899,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	Explain: 鼠标经过状态a:hover，当前选中状态li:current。
 */
 /*导航条*/
-.navbar-wrapper{ height: 45px}
+.Hui-navbar{ height: 45px}
 .navbar{ position:relative; z-index:1030; background-color: #fff}
 .navbar-black{ background-color: #222}
 .navbar-fixed-top{ position:fixed; top:0;left: 0; right: 0; z-index:1030}
@@ -3117,7 +3927,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
   }
   .navbar-nav > ul > li,.navbar-nav > ul > li > a{line-height:44px;font-size:14px}
   @media (max-width: 767px) {
-    .navbar-wrapper{ height: 45px!important}
+    .Hui-navbar{ height: 45px!important}
     .logo{ margin-right: 0}
     .navbar .logo{height: 44px!important;line-height: 44px!important}
     .navbar-nav{display: none; float: none!important}
@@ -3156,7 +3966,8 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 }
 
   /*面包导航*/
-  .nav-toggle,a.nav-toggle{position:absolute; top:0px; right:15px; font-size: 20px; color:#999; padding:6px 11px;background-color:rgba(0,0,0,0.5);color:#fff;-webkit-tap-highlight-color: rgba(0,0,0,0);
+  .nav-toggle,a.nav-toggle{position:absolute; top:0px; right:15px; font-size: 20px; color:#999; padding:6px 11px;background-color:rgba(0,0,0,0.5);color:#fff;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -3370,7 +4181,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 /*鼠标经过*/
 .dropDown.hover .dropDown_A,
 .dropDown.open .dropDown_A{text-decoration:none;background-color:rgba(255,255,255,0.2)}
-.dropDown.open .dropDown_A .menu_dropdown-arrow{transition-duration:0.3s ;transition-property:all;_background-position:0 0;transform: rotate(180deg)}
+.dropDown.open .dropDown_A .Hui-admin-menu-dropdown-arrow{transition-duration:0.3s ;transition-property:all;_background-position:0 0;transform: rotate(180deg)}
 
 .menu{background-color:#fff;border:solid 1px #f2f2f2; display: inline-block}
 .menu.radius{border-top-left-radius:0;border-top-right-radius:0}
@@ -3449,17 +4260,30 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	Name:			module_slider
 	Sample:
 	<div id="tab_demo" class="HuiTab">
-      <div class="tabBar cl"><span>选项卡一</span><span>选项卡二</span><span>自适应宽度</span></div>
+      <div class="tabBar clearfix"><span>选项卡一</span><span>选项卡二</span><span>自适应宽度</span></div>
       <div class="tabCon">内容一</div>
       <div class="tabCon">内容二</div>
       <div class="tabCon">内容三</div>
     </div>
 */
-.tabBar {border-bottom: 2px solid #222}
-.tabBar span {background-color: #e8e8e8;cursor: pointer;display: inline-block;float: left;
-font-weight: bold;height: 30px;line-height: 30px;padding: 0 15px}
-.tabBar span.current{background-color: #222;color: #fff}
-.tabCon {display: none}
+.tabBar {
+	border-bottom: 1px solid #e8e8e8;
+}
+.tabBar span {
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	border-bottom: solid 2px #fff;
+}
+.tabBar span.current {
+	border-bottom-color: #1890ff;
+}
+.tabCon {
+	display: none;
+}
 
 /*4.6 标签与标号
 	Name:			style_label
@@ -3611,28 +4435,28 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	.modal-dialog {position: relative;margin:10px}
 		.modal-content{position: relative;background-color: #fff;border: 1px solid #999;border: 1px solid rgba(0,0,0,.2);outline: 0;
     		-webkit-background-clip: padding-box;
-					background-clip: padding-box;					
+					background-clip: padding-box;
 			-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
 					box-shadow: 0 3px 9px rgba(0,0,0,.5)}
-		
+
 			.modal-header {min-height: 16.42857143px;padding: 15px;border-bottom: 1px solid #eee; position:relative}
 			.modal-header .close{position:absolute; right:15px; top:15px}
 			.modal-close{position:absolute; right:15px; top:15px;font-size:24px; z-index: 9}
 			a.modal-close:hover{ text-decoration: none}
 			.modal-header h3,.modal-header .modal-title{margin:0; padding:10px 0; font-size:16px}
-			
+
 			.modal-body {position:relative;padding:15px;overflow-y:visible;word-break:break-all}
 				.modal-form {margin-bottom: 0}
-				
+
 			.modal-footer {padding:15px;margin-bottom: 0;text-align: right;background-color: #f5f5f5;border-top: 1px solid #eee;*zoom: 1}
-			
+
 			.modal-footer:before,.modal-footer:after {display: table;content: ""}
 			.modal-footer:after {clear: both}
 			.modal-footer .btn + .btn {margin-left: 5px;margin-bottom: 0}
 			.modal-footer .btn-group .btn + .btn {margin-left: -1px}
 			.modal-footer .btn-block + .btn-block {margin-left: 0}
 		.modal-scrollbar-measure {position: absolute;top: -9999px;width: 50px;height: 50px;overflow: scroll}
-		
+
 		.radius .modal-content{ border-radius:6px}
 		.radius .modal-footer{ border-bottom-left-radius:6px; border-bottom-right-radius:6px}
 /*上下居中*/
@@ -3661,10 +4485,10 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 }
 
 
-	
+
 .modal-alert{position:fixed; right:auto; bottom:auto; width:300px; left:50%;margin-left:-150px; top:50%;margin-top:-30px; z-index:9999;background-color: #fff;border: 1px solid #999;border: 1px solid rgba(0,0,0,.2);outline: 0;
 -webkit-background-clip: padding-box;
-		background-clip: padding-box;					
+		background-clip: padding-box;
 -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
 		box-shadow: 0 3px 9px rgba(0,0,0,.5)}
 
@@ -3681,7 +4505,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .modal-open .dropdown.open {*z-index: 2050}
 .modal-open .popover {z-index: 2060}
 .modal-open .tooltip {z-index: 2070}
-		
+
 /*	//old 版本
 
 	//当弹出层出现时，隐藏body右侧滚动条
@@ -3706,30 +4530,30 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	.modal.fade.in{top:50%}
 	//如果弹出层高度大于窗口，弹出窗口距顶0像素
 	.modal.modal-overflow.fade.in{top:0}
-	
+
 	//隐藏body滚动条时，页面偏移
 	.page-overflow{margin-right:16px}
-	
+
 	//弹出层的最外层，全屏，用户响应点击和滚动
 	.modal-scrollable{position:fixed;top:0;right:0;bottom:0;left:0;overflow: auto}
-	
+
 	//弹窗超出屏幕高度时，弹出层替代body右侧滚动条，实现弹出层的整体滚动
 	.modal-overflow .modal-scrollable{overflow-y:scroll}
-	
+
 	//默认遮罩层，全屏黑色
 	.modal-backdrop {position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:1040;background-color:#000}
 	//解决IE下 遮罩层兼容性
 	* html .modal-backdrop{position:absolute;left:expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth);top:expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight)}
-	
+
 	//遮罩层失去时，透明度为0
 	.modal-backdrop.fade {opacity:0;filter: alpha(opacity=0)}
-	
+
 	//遮罩层进入 0.7透明度
 	.modal-backdrop,.modal-backdrop.fade.in {opacity: 0.7;filter: alpha(opacity=70)}
-	
+
 	//Ajax加载数据时loading
 	.loading-spinner {position: absolute;top: 50%;left: 50%;margin: -12px 0 0 -12px}
-	
+
 	//弹出层header区
 	//弹出层头部
 	.modal-header {padding: 9px 15px;border-bottom: 1px solid #eee; position:relative}
@@ -3737,7 +4561,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	.modal-header .close{position:absolute; right:10px; top:10px}
 	//标题
 	.modal-header h3{margin:0; padding:10px 0; font-size:16px}
-	
+
 	//内容不限高度，内填充15px，不满意可自行修改
 	.modal-body {overflow-y:visible;padding: 15px; word-break:break-all}
 	//弹出层表单
@@ -3791,7 +4615,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 				<label class="mr-20"><input type="radio" class="radio" value="2" name="radio-feedback" id="feedback-2"> 体验反馈</label>
 				<label class="mr-20"><input type="radio" class="radio" value="3" name="radio-feedback" id="feedback-3"> 好点子</label>
 			</div>
-			<div class="formControls mt-20">
+			<div class="form-controls mt-20">
 				<textarea class="textarea valid" onKeyUp="$.Huitextarealength(this,500)" placeholder="吐槽点什么...最少输入10个字符"></textarea>
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
 			</div>
@@ -3819,13 +4643,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	.bdsharebuttonbox.Hui-share a.bds_douban{ display:inline-block; background:none;padding-left:0; text-decoration:none; margin:0; margin-right:6px; height:auto; line-height:auto}
 	.bdsharebuttonbox.Hui-share a:hover{ text-decoration:none}
 	.bdsharebuttonbox.Hui-share .share-text{ display:inline-block; margin-right:6px; color:#999; cursor:default;float:left}
-	
+
 	.bdsharebuttonbox.bdshare-button-style0-16.Hui-share a,
 	.bdsharebuttonbox.bdshare-button-style0-16.Hui-share .share-text,
 	.bdsharebuttonbox.bdshare-button-style0-16.Hui-share .Hui-iconfont{line-height:16px}
 	.bdsharebuttonbox.bdshare-button-style0-16.Hui-share .share-text,
 	.bdsharebuttonbox.bdshare-button-style0-16.Hui-share .Hui-iconfont{font-size:16px}
-	
+
 	.bdsharebuttonbox.bdshare-button-style0-24.Hui-share a,
 	.bdsharebuttonbox.bdshare-button-style0-24.Hui-share .share-text,
 	.bdsharebuttonbox.bdshare-button-style0-24.Hui-share .Hui-iconfont{line-height:24px}
@@ -3842,8 +4666,14 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	</div>
 */
 .panel{ background-color:#fff; border:solid 1px transparent}
-	.panel-header{ border-bottom:solid 1px transparent; padding:8px 15px; font-size:14px; font-weight:700; margin-bottom:-1px}/*面板标题*/
-	.panel-body{ padding:15px}/*面板内容*/
+	.panel-header {
+		border-bottom:solid 1px #eee;
+		padding:8px 20px;
+		font-size:16px;
+		font-weight:700;
+		margin-bottom:-1px;
+	}/*面板标题*/
+	.panel-body{ padding:20px}/*面板内容*/
 	.panel-footer{background-color: #f5f5f5;border-top: 1px solid #ddd;padding:5px 20px}/*面板页脚*/
 /*默认面板*/
 .panel-default{border-color:#ddd}
@@ -3946,17 +4776,17 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	.Huitags-wraper{border:solid 1px #dedede; padding:0 10px}
 		.Hui-tags-editor,
 		.Huitags-editor{position:relative; padding:10px 0 10px 24px;min-height:20px}
-		
+
 		.Hui-tags-editor .Hui-tags-icon,
 		.Huitags-editor .Huitags-icon{position:absolute; left:0; top:11px; font-size:14px; color:#666}
-		
+
 			.Hui-tags-token,
 			.Huitags-token{color:#aaa; float:left; font-size:12px; height:20px; line-height:20px; margin-right:8px; padding:0 1px; white-space:nowrap; cursor:pointer}
 			.Hui-tags-token:before,
 			.Huitags-token:before{content:"#"}
 			.Hui-tags-token:hover,
 			.Huitags-token:hover{text-decoration:line-through}
-			
+
 			.Hui-tags-iptwrap{position:relative; float:left}
 			.Huitags-input-wraper{}
 				.Hui-tags-input
@@ -3964,20 +4794,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 				.Huitags-input{}
 				.Hui-tags-label,
 				.Huitags-label{position:absolute; top:0; left:2px; width:240px; height:20px; line-height:20px; font-size:14px; overflow:hidden; z-index:1; color:#ccc}
-				
+
 			.Hui-tags-list,
 			.Huitags-list{padding:0 0 10px 0;}
-			
+
 		.Hui-notag,
 		.Huitags-notag{font-size:12px}
-		
+
 		.Hui-tags-has span,
 		.Huitags-has span{cursor:pointer; font-size:12px; white-space:nowrap; margin-right:10px}
-	
+
 	/*4.19.2 标签混排效果
 		Name:			mod_tags
 		Sample:			<div class="pd-10 tags"><a href="http://www.h-ui.net/">H-ui前端框架</a>……</div>
-	
+
 	*/
 	.tags a{height:26px; line-height:26px;padding-right:6px}
 		.tags0{}
@@ -3991,10 +4821,19 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 		.tags8{color:#F06; font-weight:bold}
 		.tags9{color:#C00; font-weight:bold;font-size:16px}
 	.tags a:hover{color:#F00; text-decoration:underline}
-	
+
 	/*4.19.3 tag云标签*/
-	#tagyun {position:relative}
-	#tagyun a {position:absolute;top:0px;left:0px;font-weight:bold;text-decoration:none;padding:3px 6px}
+	#tagyun {
+		position:relative;
+	}
+	#tagyun a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-weight: bold;
+		text-decoration: none;
+		padding: 3px 6px;
+	}
 
 /*4.20 折叠
 	Name:			mod_Huifold
@@ -4004,8 +4843,21 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	  ……
 	</ul>
 */
-.Huifold .item{position:relative}
-.Huifold .item h4{margin:0;font-weight:bold;position:relative;border-top: 1px solid #fff;font-size:15px;line-height:22px;padding:7px 10px;background-color:#eee;cursor:pointer;padding-right:30px}
+.Huifold .item {
+	position:relative;
+}
+.Huifold .item h4 {
+	margin:0;
+	font-weight:bold;
+	position:relative;
+	border-top: 1px solid #fff;
+	font-size:15px;
+	line-height:22px;
+	padding:7px 10px;
+	background-color:#eee;
+	cursor:pointer;
+	padding-right:30px;
+}
 .Huifold .item h4 b{position:absolute;display: block; cursor:pointer;right:10px;top:7px;width:16px;height:16px; text-align:center; color:#666}
 .Huifold .item .info{display:none;padding:10px}
 
@@ -4042,7 +4894,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	  </li>
 	</ul>
 */
-.commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
+.commentList .item{list-style: none outside none;margin: 1.6rem 0 0;padding-right: 64px;}
 .commentList .avatar{border: 1px solid transparent;float: left}
 	.comment-main{position:relative;margin-left:64px;border:1px solid #dedede;border-radius:2px}
 	.comment-main:before,
@@ -4056,7 +4908,11 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 		.comment-author{font-weight:700;color:#999}
 		.comment-body{padding:15px;overflow:hidden}
 		.comment-body>:last-child{margin-bottom:0}
-.commentList .comment-flip .avatar {float: right}
+.commentList .item.comment-flip {
+	padding-left: 64px;
+	padding-right: 0;
+}
+.commentList .item.comment-flip .avatar {float: right}
 	.comment-flip .comment-main{margin-left: 0; margin-right: 64px}
 	.comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
 	.comment-flip .comment-main:before,
@@ -4137,7 +4993,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .tooltip.bottom-right .tooltip-arrow {top: 0;right: 5px;border-width: 0 5px 5px;border-bottom-color: #000}
 
 /*4.26 popover 效果
-	Name:			mod_popover
+	Name:     mod_popover
 */
 .popover {position: absolute;top: 0;left: 0;z-index: 1060;display: none;max-width: 276px;padding: 1px;font-size: 14px;font-weight: normal;line-height: 1.42857143;text-align: left;white-space: normal;background-color: #fff;-webkit-background-clip: padding-box;background-clip: padding-box;border: 1px solid #ccc;border: 1px solid rgba(0, 0, 0, .2);border-radius: 6px;-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);box-shadow: 0 5px 10px rgba(0, 0, 0, .2)}
 .popover.top {margin-top: -10px}
@@ -4159,9 +5015,17 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .popover.left > .arrow:after {right: 1px;bottom: -10px;content: " ";border-right-width: 0;border-left-color: #fff}
 
 /*4.27 datetimepicker日期插件
-	Name:			mod_datetimepicker
+	Name:     mod_datetimepicker
 	Sample:
 */
+.datetimepicker-input {
+	background:#fff url(../images/datetimepicker/datetimepicker.gif) no-repeat right;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.datetimepicker-input::-ms-clear {
+	display:none;
+}
 .datetimepicker {padding: 4px;margin-top: 1px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;direction: ltr;position: absolute;top: 100%;left: 0;z-index: 1000;display: none;float: left;min-width: 160px;padding: 5px 0;margin: 2px 0 0;font-size: 14px;list-style: none;background-color: #ffffff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-radius: 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);background-clip: padding-box}
 .datetimepicker-inline {width: 220px}
 .datetimepicker.datetimepicker-rtl {direction: rtl}
@@ -4202,10 +5066,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .datetimepicker table tr td.today:hover,
 .datetimepicker table tr td.today.disabled,
 .datetimepicker table tr td.today.disabled:hover {background-color: #fde19a;background-image: -moz-linear-gradient(top, #fdd49a, #fdf59a);
-	background-image: -ms-linear-gradient(top, #fdd49a, #fdf59a);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdd49a), to(#fdf59a));
-	background-image: -webkit-linear-gradient(top, #fdd49a, #fdf59a);
-	background-image: -o-linear-gradient(top, #fdd49a, #fdf59a);
 	background-image: linear-gradient(top, #fdd49a, #fdf59a);
 	background-repeat: repeat-x;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);border-color: #fdf59a #fdf59a #fbed50;border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)}
 
@@ -4241,13 +5102,16 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .datetimepicker table tr td.active:hover,
 .datetimepicker table tr td.active.disabled,
 .datetimepicker table tr td.active.disabled:hover {background-color: #006dcc;
-	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-	background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-	background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
 	background-image: linear-gradient(top, #0088cc, #0044cc);
-	background-repeat: repeat-x;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);border-color: #0044cc #0044cc #002a80;border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);color: #fff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)}
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+}
 
 .datetimepicker table tr td.active:hover,
 .datetimepicker table tr td.active:hover:hover,
@@ -4297,14 +5161,16 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .datetimepicker table tr td span.active:hover,
 .datetimepicker table tr td span.active.disabled,
 .datetimepicker table tr td span.active.disabled:hover {background-color: #006dcc;
-	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-	background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-	background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
 	background-image: linear-gradient(top, #0088cc, #0044cc);
 	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);border-color: #0044cc #0044cc #002a80;border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);color: #fff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)}
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
 
 .datetimepicker table tr td span.active:hover,
 .datetimepicker table tr td span.active:hover:hover,
@@ -4344,7 +5210,11 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .datetimepicker tfoot th:hover {background: #eee}
 .input-append.date .add-on i,
 .input-prepend.date .add-on i,
-.input-group.date .input-group-addon span {cursor: pointer;width: 14px;height: 14px}
+.input-group.date .input-group-addon span {
+	cursor: pointer;
+	width: 14px;
+	height: 14px;
+}
 
 /*4.27 分类检索
 	Name:			mod_select-category
@@ -4354,13 +5224,12 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 		<dl>
 			<dt class="dt">选择区域：</dt>
 			<dd class="dd">
-				<a href="#" title="北京市">北京市</a>  
-            </dd>
+        <a href="#" title="北京市">北京市</a>
+      </dd>
 		</dl>
 	</div>
 </div>
 */
-.select-category{}
 .select-category .item{padding:5px; position:relative; border-bottom:solid 1px #ddd}
 .select-category .item .dt{ width:90px; float:left;white-space:nowrap}
 .select-category .item .dd{ margin-left:100px; text-align:left; font-size:14px; height:auto}
@@ -4368,21 +5237,33 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 
 /*4.28 sortable拖动*/
 .ui-state-highlight{ height:50px; margin-top:20px;border:1px solid #fcefa1;background:#fbf9ee;color:#363636}
-.sortable-control{ cursor:move}
+.sortable-control {cursor:move}
 
 /*4.29 ColorPicker 颜色控件*/
 
 
 /*5 页面
-	Name:			page
+	Name:    page
 */
 
-/*5.1 错误页-404*/
-.page-404{ color:#afb5bf; padding-top:60px; padding-bottom:90px}
-.page-404 .error-title{font-size:80px}
-.page-404 .error-title .iconfont{font-size:80px}
-.page-404 .error-description{font-size:24px}
-.page-404 .error-info{font-size:14px}
+/*5.1 错误页*/
+.page-error {
+	color: #afb5bf;
+	padding-top: 60px;
+	padding-bottom: 90px;
+}
+.page-error .error-title {
+	font-size: 80px;
+}
+.page-error .error-title .iconfont {
+	font-size:80px;
+}
+.page-error .error-description {
+	font-size: 24px;
+}
+.page-error .error-info {
+	font-size:14px;
+}
 
 /*5.2 博客列表页*/
 .page-blog-list{}
