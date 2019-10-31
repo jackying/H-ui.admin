@@ -106,23 +106,22 @@ function creatIframe(href,titleName){
 
 	show_nav.find('li').removeClass("active");
 	show_nav.append('<li class="active"><span data-href="'+href+'">'+titleName+'</span><i></i><em></em></li>');
-	if('function'==typeof $('#min_title_list li').contextMenu){
-		$("#min_title_list li").contextMenu('Huiadminmenu', {
-			bindings: {
-				'closethis': function(t) {
-					var $t = $(t);
-					if($t.find("i")){
-						$t.find("i").trigger("click");
-					}
-				},
-				'closeall': function(t) {
-					$("#min_title_list li i").trigger("click");
-				},
-			}
-		});
-	}else {
+  console.log('1');
 
-	}
+  show_nav.find('li').contextMenu('Huiadminmenu', {
+    bindings: {
+      'closethis': function(t) {
+        var $t = $(t);
+        if($t.find("i")){
+          $t.find("i").trigger("click");
+        }
+      },
+      'closeall': function(t) {
+        show_nav.find('li i').trigger("click");
+      },
+    }
+  });
+
 	var $tabNavitem = topWindow.find(".acrossTab li");
 	if (!$tabNav[0]){return}
 	$tabNavitem.each(function(index, element) {
