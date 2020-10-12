@@ -4492,6 +4492,7 @@ function displaynavbar(obj){
 !function($) {
 	$.fn.Huifold = function(options){
 		var defaults = {
+			item: '.item',
 			titCell:'.Huifold-header',
 			mainCell:'.Huifold-body',
 			type:1,//1	只打开一个，可以全部关闭;2	必须有一个打开;3	可打开多个
@@ -4505,10 +4506,12 @@ function displaynavbar(obj){
 			var that = $(this);
 			if(options.openKeys && options.openKeys.length > 0) {
 				for(var i=0;i<options.openKeys.length; i++) {
-					that.find(options.titCell).eq(options.openKeys[i]).addClass(options.className);
-					that.find(options.mainCell).eq(options.openKeys[i]).show();
-					if (that.find(options.titCell).eq(options.openKeys[i]).find("b")) {
-						that.find(options.titCell).eq(options.openKeys[i]).find("b").html("-");
+					
+					var $item = that.find(options.item).eq(options.openKeys[i]);
+					$item.find(options.titCell).addClass(options.className);
+					$item.find(options.mainCell).show();
+					if ($item.find(options.titCell).find("b")) {
+						$item.find(options.titCell).find("b").html("-");
 					}
 				}
 			}
