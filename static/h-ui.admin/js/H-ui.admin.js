@@ -305,8 +305,6 @@ $(function(){
 		toNavPos();
 	});
 
-
-
 	/*换肤*/
 	$("#Hui-skin .dropDown-menu a").click(function(){
 		var v = $(this).attr("data-val");
